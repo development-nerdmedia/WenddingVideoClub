@@ -26,7 +26,7 @@
             <li class="colorchange">-</li>
             <li><a class="nav-item" href="#about">nosotros</a></li>
             <li class="colorchange">-</li>
-            <li><a class="nav-item" href="#">contacto</a></li>
+            <li><a class="nav-item contacto">contacto</a></li>
             <li class="icon">
               <a href="#"><img src="img/btnNavbar.svg" alt="" /></a>
             </li>
@@ -35,6 +35,68 @@
       </nav>
     </header>
     <main>
+      <section class="contactopage">
+        <div class="containerContact">
+          <div class="content">
+            <div class="close">
+              <a class="btn-close cerrar"
+                ><img src="img/close.svg" alt="close"
+              /></a>
+            </div>
+            <div class="center">
+              <div class="contenido">
+                <div class="title">
+                  <h2>Amablemente te atenderemos</h2>
+                  <p>Deja tus datos y nos contactamos en breve</p>
+                </div>
+                <div class="contenido-formulario">
+                  <h2>+51 965045456</h2>
+                  <p>hola@wedding.video.club</p>
+                  <form
+                    id="fs-frm"
+                    name="complaint-form"
+                    accept-charset="utf-8"
+                    action="thanks.html"
+                    method=""
+                  >
+                    <fieldset id="fs-frm-inputs">
+                      <input
+                        type="text"
+                        name="name"
+                        id="full-name"
+                        placeholder="Nombre:"
+                        required=""
+                      />
+                      <input
+                        type="number"
+                        name="telephone"
+                        id="telephone"
+                        placeholder="Teléfono"
+                        required=""
+                      />
+                      <input
+                        type="email"
+                        name="_replyto"
+                        id="email-address"
+                        placeholder="Email"
+                        required=""
+                      />
+                      <textarea
+                        rows="6"
+                        name="message"
+                        id="message"
+                        placeholder="Describe el presupueto que necesitas"
+                        required=""
+                      ></textarea>
+                      <input class="btnEnviar" type="submit" value="Enviar" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="home">
         <div class="home-bg"></div>
         <div class="container">
@@ -45,16 +107,13 @@
                 Sabemos lo especial que es este día y sabemos la planificación y
                 el esfuerzo que demanda
               </p>
-              <a href="#">Solicita un presupuesto</a>
+              <a class="contacto">Solicita un presupuesto</a>
             </div>
             <div class="part2">
               <p>Scroll</p>
             </div>
           </div>
         </div>
-      </section>
-      <section class="bg">
-        <div class="bg-hojas"></div>
       </section>
       <section class="about" id="about">
         <div class="container">
@@ -76,7 +135,7 @@
                 querran ver toda su vida.
               </p>
               <div class="btn">
-                <a href="#">Contáctanos</a>
+                <a class="contacto">Contáctanos</a>
               </div>
             </div>
           </div>
@@ -87,13 +146,13 @@
           <div class="context">
             <h2>Reels</h2>
             <div class="autoplay">
-              <div><img src="./img/foto1.png" alt="" /></div>
-              <div><img src="img/foto2.png" alt="" /></div>
-              <div><img src="./img/foto1.png" alt="" /></div>
-              <div><img src="img/foto2.png" alt="" /></div>
+              <div class="boda1"><img src="./img/foto1.png" alt="" /></div>
+              <div class="boda2"><img src="img/foto2.png" alt="" /></div>
+              <div class="boda1"><img src="./img/foto1.png" alt="" /></div>
+              <div class="boda2"><img src="img/foto2.png" alt="" /></div>
             </div>
             <div class="btn">
-              <a href="#">Solicita un presupuesto</a>
+              <a class="contacto">Solicita un presupuesto</a>
             </div>
           </div>
         </div>
@@ -115,7 +174,7 @@
           <div><img src="img/foto1-4.png" alt="" /></div>
         </div>
         <div class="btn container">
-          <a href="#">Contáctanos</a>
+          <a class="contacto">Contáctanos</a>
         </div>
       </section>
     </main>

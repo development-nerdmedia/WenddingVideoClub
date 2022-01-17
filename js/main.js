@@ -41,6 +41,16 @@ window.addEventListener('scroll', () => {
     }
 })
 
+document.addEventListener("click", function (e) {
+    if (e.target.closest(".contacto")) {
+        document.querySelector(".contactopage").classList.toggle("open");
+        jQuery('body').addClass('scrollhidden');
+    }
+    if (e.target.closest(".cerrar")) {
+        document.querySelector(".contactopage").classList.toggle("open");
+        jQuery('body').removeClass('scrollhidden');
+    }
+})
 
 $(document).ready(function () {
     $('.autoplay').slick({

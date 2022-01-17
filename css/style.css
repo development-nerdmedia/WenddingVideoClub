@@ -28,6 +28,16 @@ header {
   max-width: 1265px;
   margin: 0 auto; }
 
+.containerContact {
+  width: 85%;
+  max-width: 1265px;
+  margin: 0 auto;
+  padding: 50px 0;
+  height: 100%; }
+
+.content {
+  height: 100%; }
+
 #navigation {
   display: flex;
   justify-content: space-between;
@@ -61,6 +71,13 @@ ul li {
 ul li.icon {
   margin-right: 70px;
   height: 31px; }
+
+.scrollhidden {
+  overflow: hidden; }
+
+a.contacto,
+a.cerrar {
+  cursor: pointer; }
 
 .nav-item {
   color: white;
@@ -160,14 +177,6 @@ ul li.icon {
   100% {
     bottom: -150px; } }
 
-.bg {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  z-index: -2; }
-
 /*about*/
 .about {
   height: 100vh;
@@ -259,5 +268,157 @@ ul li.icon {
 .slick-prev {
   display: none !important; }
 
+/*Page thanks*/
+.thanks .content {
+  position: relative; }
+  .thanks .content .contenidoThnaks {
+    justify-content: center;
+    position: relative; }
+  .thanks .content .textThank .btn {
+    text-align: center;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    width: 690px; }
+    .thanks .content .textThank .btn a {
+      border: 1px solid #000;
+      font-family: var(--fuente-texto);
+      font-size: 42px;
+      color: #000;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 15px 50px;
+      border-radius: 17px; }
+    .thanks .content .textThank .btn a.instagram {
+      padding: 15px 30px; }
+  .thanks .content .textThank .titleThanks {
+    display: flex;
+    text-align: center;
+    flex-direction: column; }
+  .thanks .content .textThank h1 {
+    font-family: var(--fuente-texto);
+    font-weight: 800;
+    font-size: 84px;
+    font-style: italic;
+    justify-content: center; }
+  .thanks .content .textThank p {
+    font-family: var(--fuente-titulo);
+    font-size: 25px;
+    margin-top: 15px; }
+  .thanks .content .textThank::before {
+    content: url(../img/rama3.png);
+    position: absolute;
+    right: 74px;
+    top: -174px; }
+
+.thanks .content::before {
+  content: none !important; }
+
+.thanks .content::after {
+  content: none !important; }
+
+/*contacto page*/
 .contactopage {
-  height: 100vh; }
+  height: 100vh;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  background-color: #fff; }
+  .contactopage .content {
+    position: relative; }
+  .contactopage .content::before {
+    content: url(../img/rama1.png);
+    position: absolute;
+    left: -146px;
+    top: -79px; }
+  .contactopage .content::after {
+    content: url(../img/rama2.png);
+    position: absolute;
+    right: -146px;
+    bottom: -40px; }
+  .contactopage .close {
+    display: flex;
+    justify-content: end; }
+    .contactopage .close a img {
+      width: 60px; }
+  .contactopage .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    .contactopage .center .contenido {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      transform: translateY(-120px); }
+    .contactopage .center .title {
+      width: 50%; }
+      .contactopage .center .title h2 {
+        font-family: var(--fuente-texto);
+        font-size: 84px;
+        width: 650px;
+        font-style: italic; }
+      .contactopage .center .title p {
+        font-family: var(--fuente-titulo);
+        font-size: 26px; }
+    .contactopage .center .contenido-formulario {
+      padding-left: 50px;
+      width: 40%; }
+      .contactopage .center .contenido-formulario h2,
+      .contactopage .center .contenido-formulario p {
+        font-family: var(--fuente-titulo);
+        font-size: 35px;
+        font-weight: 300; }
+      .contactopage .center .contenido-formulario form {
+        margin-top: 20px; }
+        .contactopage .center .contenido-formulario form fieldset {
+          display: flex;
+          flex-direction: column;
+          border: none; }
+          .contactopage .center .contenido-formulario form fieldset input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0; }
+          .contactopage .center .contenido-formulario form fieldset input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0; }
+          .contactopage .center .contenido-formulario form fieldset input[type="number"] {
+            -moz-appearance: textfield; }
+          .contactopage .center .contenido-formulario form fieldset input {
+            font-family: var(--fuente-titulo);
+            margin-bottom: 20px;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 18px; }
+          .contactopage .center .contenido-formulario form fieldset input[type="email"] {
+            margin-bottom: 35px; }
+          .contactopage .center .contenido-formulario form fieldset textarea {
+            font-family: var(--fuente-titulo);
+            border: none;
+            border-bottom: 1px solid #000;
+            margin-bottom: 30px;
+            font-size: 18px;
+            height: 130px; }
+          .contactopage .center .contenido-formulario form fieldset input[type="submit"] {
+            width: 270px;
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+            font-family: var(--fuente-texto);
+            font-size: 43px;
+            font-weight: 300;
+            border-radius: 18px;
+            height: 77px; }
+  .contactopage .form {
+    display: flex;
+    flex-direction: column; }
+
+.contactopage.open {
+  transform: translateX(0%);
+  z-index: 10;
+  position: absolute, fixed;
+  top: 0; }
