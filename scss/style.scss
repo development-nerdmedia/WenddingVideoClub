@@ -181,16 +181,27 @@ a.cerrar {
 
 .home-bg {
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
   width: 100%;
-  background-image: url(../img/backHome.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  animation: zoomInOut 20s ease infinite;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-image: url(../img/backHome.png);
+  //   background-attachment: fixed;
+  //   background-size: cover;
+  //   background-position: center;
+  //   z-index: -2;
+  //   animation: zoomInOut 20s ease infinite;
 }
 
 @keyframes zoomInOut {
@@ -303,6 +314,41 @@ a.cerrar {
         font-style: italic;
       }
     }
+  }
+}
+
+.reels {
+  .autoplay {
+    .boda1,
+    .boda2 {
+      video {
+        display: none;
+        border-radius: 20px;
+      }
+    }
+    .boda1:hover,
+    .boda2:hover {
+      img {
+        // display: none;
+        animation: ocultar 0.8s ease;
+        animation-fill-mode: forwards;
+      }
+      video {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes ocultar {
+  0% {
+    position: absolute;
+    opacity: 1;
+  }
+  100% {
+    position: absolute;
+    opacity: 0;
+    display: none;
   }
 }
 
@@ -522,4 +568,35 @@ a.cerrar {
   z-index: 10;
   position: absolute, fixed;
   top: 0;
+}
+
+footer {
+  padding: 100px 0;
+  .contenidoFooter {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 66px;
+    h3 {
+      font-family: var(--fuente-texto);
+      font-size: 42px;
+      font-weight: 300;
+    }
+  }
+  .creditos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    h3 {
+      font-family: var(--fuente-titulo);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 14px;
+    }
+    span {
+      padding: 2.5px 0 0 8px;
+    }
+    img {
+      padding: 0 0 0 19px;
+    }
+  }
 }

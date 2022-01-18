@@ -151,16 +151,15 @@ a.cerrar {
 
 .home-bg {
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
   width: 100%;
-  background-image: url(../img/backHome.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-  animation: zoomInOut 20s ease infinite; }
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; }
+  .home-bg video {
+    min-width: 100%;
+    min-height: 100%; }
 
 @keyframes zoomInOut {
   0%,
@@ -249,6 +248,29 @@ a.cerrar {
         padding: 15px 45px;
         border-radius: 16.93px;
         font-style: italic; }
+
+.reels .autoplay .boda1 video,
+.reels .autoplay .boda2 video {
+  display: none;
+  border-radius: 20px; }
+
+.reels .autoplay .boda1:hover img,
+.reels .autoplay .boda2:hover img {
+  animation: ocultar 0.8s ease;
+  animation-fill-mode: forwards; }
+
+.reels .autoplay .boda1:hover video,
+.reels .autoplay .boda2:hover video {
+  display: block; }
+
+@keyframes ocultar {
+  0% {
+    position: absolute;
+    opacity: 1; }
+  100% {
+    position: absolute;
+    opacity: 0;
+    display: none; } }
 
 .galeria .btn {
   margin-top: 100px; }
@@ -422,3 +444,27 @@ a.cerrar {
   z-index: 10;
   position: absolute, fixed;
   top: 0; }
+
+footer {
+  padding: 100px 0; }
+  footer .contenidoFooter {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 66px; }
+    footer .contenidoFooter h3 {
+      font-family: var(--fuente-texto);
+      font-size: 42px;
+      font-weight: 300; }
+  footer .creditos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+    footer .creditos h3 {
+      font-family: var(--fuente-titulo);
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 14px; }
+    footer .creditos span {
+      padding: 2.5px 0 0 8px; }
+    footer .creditos img {
+      padding: 0 0 0 19px; }
