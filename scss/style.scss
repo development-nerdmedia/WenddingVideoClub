@@ -321,7 +321,6 @@ a.cerrar {
   .autoplay {
     .boda1,
     .boda2 {
-      width: 586px;
       margin: 0 20px;
       img {
         width: 584px !important;
@@ -343,6 +342,38 @@ a.cerrar {
         display: block;
       }
     }
+  }
+
+  .slick-next,
+  .slick-prev {
+    width: 51px;
+    height: 51px;
+  }
+
+  .slick-next {
+    right: 0 !important;
+    top: -100px;
+  }
+
+  .slick-prev {
+    top: -100px;
+    left: unset !important;
+    right: 76px;
+  }
+
+  .slick-next::before,
+  .slick-prev::before {
+    content: none !important;
+  }
+
+  .slick-next {
+    background-image: url(../img/flecha2.svg) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+  }
+  .slick-prev {
+    background-image: url(../img/flecha1.svg) !important;
+    background-size: 100% !important;
   }
 }
 
@@ -374,11 +405,37 @@ a.cerrar {
       font-style: italic;
     }
   }
-}
+  .slick-next,
+  .slick-prev {
+    width: 51px;
+    height: 51px;
+  }
 
-.slick-next,
-.slick-prev {
-  display: none !important;
+  .slick-next {
+    right: 319px !important;
+    top: -100px;
+  }
+
+  .slick-prev {
+    top: -100px;
+    left: unset !important;
+    right: 395px;
+  }
+
+  .slick-next::before,
+  .slick-prev::before {
+    content: none !important;
+  }
+
+  .slick-next {
+    background-image: url(../img/flecha2.svg) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+  }
+  .slick-prev {
+    background-image: url(../img/flecha1.svg) !important;
+    background-size: 100% !important;
+  }
 }
 
 /*Page thanks*/

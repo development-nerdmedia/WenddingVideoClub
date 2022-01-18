@@ -251,7 +251,6 @@ a.cerrar {
 
 .reels .autoplay .boda1,
 .reels .autoplay .boda2 {
-  width: 586px;
   margin: 0 20px; }
   .reels .autoplay .boda1 img,
   .reels .autoplay .boda2 img {
@@ -270,6 +269,33 @@ a.cerrar {
 .reels .autoplay .boda1:hover video,
 .reels .autoplay .boda2:hover video {
   display: block; }
+
+.reels .slick-next,
+.reels .slick-prev {
+  width: 51px;
+  height: 51px; }
+
+.reels .slick-next {
+  right: 0 !important;
+  top: -100px; }
+
+.reels .slick-prev {
+  top: -100px;
+  left: unset !important;
+  right: 76px; }
+
+.reels .slick-next::before,
+.reels .slick-prev::before {
+  content: none !important; }
+
+.reels .slick-next {
+  background-image: url(../img/flecha2.svg) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat; }
+
+.reels .slick-prev {
+  background-image: url(../img/flecha1.svg) !important;
+  background-size: 100% !important; }
 
 @keyframes ocultar {
   0% {
@@ -294,9 +320,32 @@ a.cerrar {
     border-radius: 16.93px;
     font-style: italic; }
 
-.slick-next,
-.slick-prev {
-  display: none !important; }
+.galeria .slick-next,
+.galeria .slick-prev {
+  width: 51px;
+  height: 51px; }
+
+.galeria .slick-next {
+  right: 319px !important;
+  top: -100px; }
+
+.galeria .slick-prev {
+  top: -100px;
+  left: unset !important;
+  right: 395px; }
+
+.galeria .slick-next::before,
+.galeria .slick-prev::before {
+  content: none !important; }
+
+.galeria .slick-next {
+  background-image: url(../img/flecha2.svg) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat; }
+
+.galeria .slick-prev {
+  background-image: url(../img/flecha1.svg) !important;
+  background-size: 100% !important; }
 
 /*Page thanks*/
 .thanks .content {
