@@ -249,10 +249,18 @@ a.cerrar {
         border-radius: 16.93px;
         font-style: italic; }
 
-.reels .autoplay .boda1 video,
-.reels .autoplay .boda2 video {
-  display: none;
-  border-radius: 20px; }
+.reels .autoplay .boda1,
+.reels .autoplay .boda2 {
+  width: 586px;
+  margin: 0 20px; }
+  .reels .autoplay .boda1 img,
+  .reels .autoplay .boda2 img {
+    width: 584px !important;
+    height: 487px !important; }
+  .reels .autoplay .boda1 video,
+  .reels .autoplay .boda2 video {
+    display: none;
+    border-radius: 20px; }
 
 .reels .autoplay .boda1:hover img,
 .reels .autoplay .boda2:hover img {

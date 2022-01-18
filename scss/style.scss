@@ -321,6 +321,12 @@ a.cerrar {
   .autoplay {
     .boda1,
     .boda2 {
+      width: 586px;
+      margin: 0 20px;
+      img {
+        width: 584px !important;
+        height: 487px !important;
+      }
       video {
         display: none;
         border-radius: 20px;
