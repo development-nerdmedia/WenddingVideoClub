@@ -4,6 +4,8 @@ var titlenavback = document.getElementById('title2');
 var nav = document.getElementById('navigation');
 var lista = document.getElementsByClassName('nav-item');
 var line = document.getElementsByClassName('colorchange');
+var btnmusicblanco = document.getElementById('white');
+var btnmusicnegro = document.getElementById('black');
 
 window.addEventListener('scroll', () => {
     var scroll = window.scrollY
@@ -16,6 +18,9 @@ window.addEventListener('scroll', () => {
         titlenavback.style.display = "block";
         nav.style.padding = "25px 0";
         nav.style.alignItems = "center";
+        btnmusicblanco.style.display = "none";
+        btnmusicnegro.style.display = "block";
+
         for (var i = 0, len = lista.length; i < len; i++) {
             lista[i].style.color = "#000";
         }
@@ -32,6 +37,8 @@ window.addEventListener('scroll', () => {
         titlenavback.style.display = "none";
         nav.style.padding = "70px 0";
         nav.style.alignItems = "start";
+        btnmusicblanco.style.display = "block";
+        btnmusicnegro.style.display = "none";
         for (var i = 0, len = lista.length; i < len; i++) {
             lista[i].style.color = "#fff";
         }

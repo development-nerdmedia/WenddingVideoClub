@@ -29,6 +29,10 @@ header {
   box-shadow: 0 5px 15px #00000029;
 }
 
+a img#black {
+  display: none;
+}
+
 .container {
   width: 85%;
   max-width: 1265px;
@@ -85,7 +89,7 @@ ul {
   }
   li.icon {
     margin-right: 70px;
-    height: 31px;
+    height: 35px;
   }
 }
 
