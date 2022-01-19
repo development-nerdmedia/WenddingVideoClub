@@ -46,6 +46,9 @@ a img#black {
   justify-content: space-between;
   padding: 70px 0; }
 
+.logo a {
+  text-decoration: none; }
+
 .logo .title {
   font-family: var(--fuente-titulo);
   font-size: 50px;
@@ -72,7 +75,6 @@ ul li {
   font-weight: 700; }
 
 ul li.icon {
-  margin-right: 70px;
   height: 35px; }
 
 .scrollhidden {
@@ -181,7 +183,7 @@ a.cerrar {
 
 /*about*/
 .about {
-  height: 100vh;
+  padding-top: 150px;
   display: flex;
   align-items: center; }
   .about .context {
@@ -225,32 +227,29 @@ a.cerrar {
 /*Reels*/
 .reels,
 .galeria {
-  height: 100vh; }
-  .reels .context,
-  .galeria .context {
-    padding-top: 100px; }
-    .reels .context h2,
-    .galeria .context h2 {
+  padding-top: 150px; }
+  .reels .context h2,
+  .galeria .context h2 {
+    font-family: var(--fuente-texto);
+    font-weight: 600;
+    font-size: 58.55px;
+    line-height: 63px;
+    margin-bottom: 60px; }
+  .reels .context .btn,
+  .galeria .context .btn {
+    margin-top: 80px; }
+    .reels .context .btn a,
+    .galeria .context .btn a {
       font-family: var(--fuente-texto);
-      font-weight: 600;
-      font-size: 58.55px;
-      line-height: 63px;
-      margin-bottom: 60px; }
-    .reels .context .btn,
-    .galeria .context .btn {
-      margin-top: 80px; }
-      .reels .context .btn a,
-      .galeria .context .btn a {
-        font-family: var(--fuente-texto);
-        font-size: 42.33px;
-        font-weight: 300;
-        line-height: 42.33px;
-        text-decoration: none;
-        color: #000;
-        border: 1px solid #000;
-        padding: 15px 45px;
-        border-radius: 16.93px;
-        font-style: italic; }
+      font-size: 42.33px;
+      font-weight: 300;
+      line-height: 42.33px;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid #000;
+      padding: 15px 45px;
+      border-radius: 16.93px;
+      font-style: italic; }
 
 .containerback {
   position: relative; }
@@ -260,7 +259,11 @@ a.cerrar {
   position: absolute;
   z-index: -2;
   top: -120px;
-  left: 21%; }
+  left: 21%;
+  opacity: 0.8; }
+
+.slick-dots {
+  display: none !important; }
 
 .reels .autoplay .boda1,
 .reels .autoplay .boda2 {
@@ -419,7 +422,8 @@ a.cerrar {
   position: fixed;
   transition: transform 0.5s ease;
   transform: translateX(100%);
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: hidden; }
   .contactopage .content {
     position: relative; }
   .contactopage .content::before {
@@ -538,3 +542,48 @@ footer {
       padding: 2.5px 0 0 8px; }
     footer .creditos img {
       padding: 0 0 0 19px; }
+
+@media (max-width: 1440px) {
+  .logo .title {
+    font-size: 40px;
+    line-height: 40px; }
+  ul li {
+    font-size: 28px;
+    margin: 0 14px; }
+  .home .part1 h1 {
+    font-size: 79.5px;
+    line-height: 77px;
+    width: 751px; }
+  .home .part1 p {
+    font-size: 26px;
+    margin-bottom: 53px; }
+  .home .part1 a {
+    font-size: 35px;
+    padding: 15px 34px; }
+  .about .context .part1 img {
+    width: 548px; }
+  .about .context .part2 h2 {
+    font-size: 72.39px;
+    width: 525px; }
+  .about .context .part2 h3 {
+    font-size: 33px; }
+  .about .context .part2 p {
+    font-size: 24.53px; }
+  .about .context .part2 a {
+    font-size: 39.94px;
+    padding: 15px 32px; }
+  .backRama::before {
+    top: -109px;
+    left: 11%; } }
+
+@media (max-width: 1440px) and (max-height: 841px) {
+  .galeria .slick-prev,
+  .galeria .slick-next,
+  .reels .slick-prev,
+  .reels .slick-next {
+    top: -94px; } }
+
+@media (max-width: 1440px) {
+  .galeria .slick-prev,
+  .galeria .slick-next {
+    transform: translateX(207px); } }
