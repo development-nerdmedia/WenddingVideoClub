@@ -124,6 +124,15 @@ $(document).ready(function () {
                 }
             },
             {
+                breakpoint: 1281,
+                settings: {
+                    slidesToShow: 3.4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,

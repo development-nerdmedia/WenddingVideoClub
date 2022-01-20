@@ -526,6 +526,7 @@ a.cerrar {
       position: absolute;
       right: 74px;
       top: -174px;
+      opacity: 0.8;
     }
   }
   .content::before {
@@ -557,12 +558,14 @@ a.cerrar {
     position: absolute;
     left: -146px;
     top: -79px;
+    opacity: 0.8;
   }
   .content::after {
     content: url(../img/rama2.png);
     position: absolute;
     right: -146px;
     bottom: -40px;
+    opacity: 0.8;
   }
   .close {
     display: flex;
@@ -858,7 +861,7 @@ footer {
 
 @media (max-width: 1440px) {
   .logo .title {
-    font-size: 40px;
+    font-size: 46px;
     line-height: 40px;
   }
   ul li {
@@ -911,5 +914,123 @@ footer {
   .galeria .slick-prev,
   .galeria .slick-next {
     transform: translateX(207px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .logo .title {
+    font-size: 44px;
+    line-height: 40px;
+  }
+  .home .part1 h1 {
+    font-size: 75.3px;
+    line-height: 75px;
+    width: 700px;
+  }
+  .home .part1 p {
+    font-size: 23px;
+    width: 700px;
+  }
+  .home .part1 a {
+    font-size: 32px;
+    padding: 12px 34px;
+  }
+  .home .part2 p {
+    font-size: 26.88px;
+  }
+  .home .part2 p::before {
+    left: 32.8px;
+  }
+  .about .context .part1 img {
+    width: 516px;
+    height: 574px;
+  }
+  .about .context .part2 h2 {
+    font-size: 68.06px;
+    width: 469px;
+  }
+  .about .context .part2 h3 {
+    font-size: 31px;
+  }
+  .about .context .part2 p {
+    font-size: 23.06px;
+    line-height: 30px;
+  }
+  .about .context .part2 a {
+    font-size: 37.55px;
+    padding: 10px 32px;
+  }
+  .reels .context h2,
+  .galeria .context h2 {
+    margin-bottom: 42px;
+  }
+
+  .reels .slick-prev,
+  .reels .slick-next {
+    top: -77px;
+  }
+
+  .reels .autoplay .boda1 img,
+  .reels .autoplay .boda2 img {
+    width: 504px !important;
+    height: 418px !important;
+  }
+  .reels .autoplay .boda1:hover video,
+  .reels .autoplay .boda2:hover video {
+    width: 504px !important;
+    height: 418px !important;
+  }
+  .reels .context .btn a,
+  .galeria .context .btn a {
+    font-size: 37.55px;
+    padding: 11px 45px;
+  }
+  .galeria .slick-prev,
+  .galeria .slick-next {
+    transform: translateX(222px);
+  }
+  .contactopage .center .title h2 {
+    font-size: 70px;
+    width: 544px;
+  }
+  .contactopage .center .title p {
+    font-size: 23px;
+  }
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 32px;
+  }
+  .contactopage .center .contenido-formulario form fieldset textarea {
+    height: 95px;
+  }
+  .contactopage
+    .center
+    .contenido-formulario
+    form
+    fieldset
+    input[type="submit"] {
+    width: 241px;
+    font-size: 40px;
+    height: 65px;
+  }
+  .thanks .content .textThank h1 {
+    font-size: 70px;
+  }
+  .thanks .content .textThank .btn {
+    height: 65px;
+  }
+  .thanks .content .textThank::before {
+    top: -179px;
+    opacity: 0.8;
+    right: 25px;
+    transform: scale(0.8);
+  }
+  .slick-slide img {
+    display: block;
+    width: 362px;
+  }
+  .backRama::before {
+    transform: scale(0.96);
+    top: -137px;
   }
 }
