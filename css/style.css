@@ -81,6 +81,9 @@ ul li.icon {
 .scrollhidden {
   overflow: hidden; }
 
+.imgTablet {
+  display: none; }
+
 a.contacto,
 a.cerrar {
   cursor: pointer; }
@@ -841,3 +844,124 @@ input[type="submit"] {
   .backRama::before {
     transform: scale(0.96);
     top: -137px; } }
+
+@media (max-width: 1024px) {
+  #navigation {
+    padding: 43px 0; }
+  .backRama::before {
+    display: none; }
+  .home .part1 h1 {
+    font-size: 65px;
+    line-height: 65px;
+    width: 614px; }
+  .home .part1 p {
+    font-size: 21px;
+    width: 529px;
+    margin-bottom: 39px;
+    line-height: 30px; }
+  .about .context {
+    display: block; }
+  .about .context .part1 {
+    display: none; }
+  .about .context .part2 {
+    width: 100%; }
+  .about .context .part2 h2 {
+    width: 100%;
+    font-size: 76.73px;
+    position: relative; }
+    .about .context .part2 h2::before {
+      content: url(../img/rosa.png);
+      position: absolute;
+      top: -85px;
+      left: 226px; }
+  .about .context .part2 h3 {
+    font-size: 35px;
+    margin-top: 18px;
+    padding-bottom: 30px; }
+  .about .context .part2 p {
+    font-size: 26px;
+    line-height: 30px;
+    padding-top: 0; }
+  .imgTablet {
+    display: block;
+    text-align: center;
+    margin: 53px 0; }
+    .imgTablet img {
+      width: 516px;
+      height: 574.72px; }
+    .imgTablet::before {
+      content: url(../img/ramaimagen.png);
+      width: 362.79px;
+      height: 551.73px;
+      position: absolute;
+      top: 538px;
+      left: 136px;
+      z-index: -2; }
+  .about .context .part2 .btn {
+    justify-content: center;
+    margin-top: 52px; }
+  .reels .autoplay .boda1 img,
+  .reels .autoplay .boda2 img {
+    width: 517px !important;
+    height: 431px !important; }
+  .about {
+    padding-top: 123px; }
+  .reels .autoplay {
+    position: relative; }
+    .reels .autoplay::before {
+      content: url(../img/ramasreels.png);
+      position: absolute;
+      top: -187px;
+      left: 226px;
+      transform: scale(0.8); }
+  .reels .autoplay .boda1,
+  .reels .autoplay .boda2 {
+    width: 392.5px !important; }
+  .reels .autoplay .boda1 img,
+  .reels .autoplay .boda2 img {
+    width: 418px !important;
+    height: 343px !important; }
+  .reels .autoplay .boda1:hover video,
+  .reels .autoplay .boda2:hover video {
+    width: 418px !important;
+    height: 343px !important; }
+  .galeria .slick-slide {
+    width: 386px !important; }
+  .galeria .slick-prev,
+  .galeria .slick-next {
+    transform: translateX(242px); }
+  .galeria .slick-slide img {
+    width: 370px; }
+  .galeria .autoplay2 {
+    position: relative; }
+    .galeria .autoplay2::before {
+      content: url(../img/ramasgaleria.png);
+      position: absolute;
+      top: -329px;
+      left: 267px; }
+  footer .contenidoFooter {
+    flex-wrap: wrap; }
+    footer .contenidoFooter .order1 {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 40px; }
+  .contactopage .center .contenido {
+    flex-direction: column; }
+  .contactopage .center .title h2 {
+    font-size: 50px;
+    width: 380px;
+    line-height: 50px; }
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 25px; }
+  .contactopage .center .title p {
+    display: none; }
+  .contactopage .center .contenido-formulario {
+    padding-left: 0; }
+  .contactopage .center .contenido-formulario {
+    width: auto; }
+  .contactopage .center .title {
+    width: auto;
+    margin-bottom: 10px; }
+  .contactopage .center .contenido-formulario form fieldset input {
+    margin-bottom: 15px; } }
