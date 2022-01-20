@@ -75,7 +75,8 @@ ul li {
   font-weight: 700; }
 
 ul li.icon {
-  height: 35px; }
+  height: 35px;
+  margin-right: 0; }
 
 .scrollhidden {
   overflow: hidden; }
@@ -126,7 +127,10 @@ a.cerrar {
       line-height: 42.33px;
       font-weight: 300;
       padding: 15px 45px;
-      border-radius: 16.93px; }
+      border-radius: 16.93px;
+      overflow: hidden; }
+      .home .part1 a:hover {
+        color: #000; }
   .home .part2 {
     width: 50%;
     position: relative;
@@ -222,7 +226,10 @@ a.cerrar {
         border: 1px solid #000;
         padding: 15px 45px;
         border-radius: 16.93px;
-        font-style: italic; }
+        background-color: #fff;
+        overflow: hidden; }
+        .about .context .part2 a:hover {
+          color: #fff; }
 
 /*Reels*/
 .reels,
@@ -249,7 +256,11 @@ a.cerrar {
       border: 1px solid #000;
       padding: 15px 45px;
       border-radius: 16.93px;
-      font-style: italic; }
+      background-color: #fff;
+      overflow: hidden; }
+      .reels .context .btn a:hover,
+      .galeria .context .btn a:hover {
+        color: #fff; }
 
 .containerback {
   position: relative; }
@@ -284,7 +295,8 @@ a.cerrar {
 
 .reels .autoplay .boda1:hover video,
 .reels .autoplay .boda2:hover video {
-  display: block; }
+  display: block;
+  border: 1px solid #fff; }
 
 .reels .slick-next,
 .reels .slick-prev {
@@ -334,7 +346,7 @@ a.cerrar {
     border: 1px solid #000;
     padding: 15px 45px;
     border-radius: 16.93px;
-    font-style: italic; }
+    background-color: #fff; }
 
 .galeria .slick-next,
 .galeria .slick-prev {
@@ -508,7 +520,8 @@ a.cerrar {
             font-size: 43px;
             font-weight: 300;
             border-radius: 18px;
-            height: 77px; }
+            height: 77px;
+            cursor: pointer; }
   .contactopage .form {
     display: flex;
     flex-direction: column; }
@@ -542,6 +555,156 @@ footer {
       padding: 2.5px 0 0 8px; }
     footer .creditos img {
       padding: 0 0 0 19px; }
+
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #ffffff;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+  right: 0; }
+
+/* Underline From Left */
+.hvr-underline-from-left-black {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden; }
+
+.hvr-underline-from-left-black:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #000;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-underline-from-left-black:hover:before,
+.hvr-underline-from-left-black:focus:before,
+.hvr-underline-from-left-black:active:before {
+  right: 0; }
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #121212;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+  color: white; }
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/* Sweep To Right */
+.hvr-sweep-to-right-black {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-sweep-to-right-black:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-sweep-to-right-black:hover,
+.hvr-sweep-to-right-black:focus,
+.hvr-sweep-to-right-black:active {
+  color: white; }
+
+.hvr-sweep-to-right-black:hover:before,
+.hvr-sweep-to-right-black:focus:before,
+.hvr-sweep-to-right-black:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 @media (max-width: 1440px) {
   .logo .title {

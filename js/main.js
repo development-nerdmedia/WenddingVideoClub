@@ -20,9 +20,12 @@ window.addEventListener('scroll', () => {
         nav.style.alignItems = "center";
         btnmusicblanco.style.display = "none";
         btnmusicnegro.style.display = "block";
+        jQuery('li.itemNavigation').removeClass('hvr-underline-from-left');
+        jQuery('li.itemNavigation').addClass('hvr-underline-from-left-black');
 
         for (var i = 0, len = lista.length; i < len; i++) {
             lista[i].style.color = "#000";
+
         }
         for (var ii = 0, lenn = line.length; ii < lenn; ii++) {
             line[ii].style.color = "#000";
@@ -39,6 +42,9 @@ window.addEventListener('scroll', () => {
         nav.style.alignItems = "start";
         btnmusicblanco.style.display = "block";
         btnmusicnegro.style.display = "none";
+        jQuery('li.itemNavigation').addClass('hvr-underline-from-left');
+        jQuery('li.itemNavigation').removeClass('hvr-underline-from-left-black');
+
         for (var i = 0, len = lista.length; i < len; i++) {
             lista[i].style.color = "#fff";
         }
