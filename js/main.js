@@ -6,6 +6,8 @@ var lista = document.getElementsByClassName('nav-item');
 var line = document.getElementsByClassName('colorchange');
 var btnmusicblanco = document.getElementById('white');
 var btnmusicnegro = document.getElementById('black');
+var menumovilblanco = document.getElementById('white1');
+var menumoviloscuro = document.getElementById('black1');
 
 window.addEventListener('scroll', () => {
     var scroll = window.scrollY
@@ -19,6 +21,8 @@ window.addEventListener('scroll', () => {
         nav.style.padding = "25px 0";
         nav.style.alignItems = "center";
         btnmusicblanco.style.display = "none";
+        menumovilblanco.style.display = "none"
+        menumoviloscuro.style.display = "block"
         btnmusicnegro.style.display = "block";
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left-black');
@@ -42,6 +46,8 @@ window.addEventListener('scroll', () => {
         nav.style.alignItems = "start";
         btnmusicblanco.style.display = "block";
         btnmusicnegro.style.display = "none";
+        menumoviloscuro.style.display = "none"
+        menumovilblanco.style.display = "block"
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left-black');
 
@@ -59,8 +65,17 @@ document.addEventListener("click", function (e) {
         document.querySelector(".contactopage").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
     }
+    if (e.target.closest(".menumovill")) {
+
+        document.querySelector(".menumovil").classList.toggle("open");
+        jQuery('body').addClass('scrollhidden');
+    }
     if (e.target.closest(".cerrar")) {
         document.querySelector(".contactopage").classList.toggle("open");
+        jQuery('body').removeClass('scrollhidden');
+    }
+    if (e.target.closest(".cerrarr")) {
+        document.querySelector(".menumovil").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
     }
 })
@@ -86,14 +101,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
+                breakpoint: 426,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -142,14 +150,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
+                breakpoint: 426,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
