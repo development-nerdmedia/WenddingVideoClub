@@ -317,12 +317,21 @@ a.cerrar {
     }
   }
 }
+.about .context .part2 h2 {
+  position: relative;
+}
+.about .context .part2 h2::before {
+  content: url(../img/rosa.png);
+  position: absolute;
+  top: -85px;
+  left: 226px;
+}
 
 /*Reels*/
 
 .reels,
 .galeria {
-  padding-top: 150px;
+  padding-top: 139px;
   .context {
     h2 {
       font-family: var(--fuente-texto);
@@ -361,9 +370,9 @@ a.cerrar {
   content: url(../img/backabout.png);
   position: absolute;
   z-index: -2;
-  top: -120px;
-  left: 21%;
-  opacity: 0.8;
+  top: -67px;
+  left: 22%;
+  transform: scale(1.07);
 }
 
 .slick-dots {
@@ -395,13 +404,24 @@ a.cerrar {
     //     border: 1px solid #fff;
     //   }
     // }
+    .slick-slide:hover {
+      img {
+        display: none;
+        animation: ocultar 0.8s ease;
+        animation-fill-mode: forwards;
+      }
+      video {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   .slick-next,
   .slick-prev {
     width: 51px;
     height: 51px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
   }
 
   .slick-next {
@@ -428,6 +448,11 @@ a.cerrar {
   .slick-prev {
     background-image: url(../img/flecha1.svg) !important;
     background-size: 100% !important;
+  }
+
+  .reels .autoplay .boda1 video,
+  .reels .autoplay .boda2 video {
+    width: 100%;
   }
 }
 
@@ -992,6 +1017,10 @@ footer {
     font-size: 72.39px;
     width: 525px;
   }
+
+  .about .context .part2 h2::before {
+    left: 213px;
+  }
   .about .context .part2 h3 {
     font-size: 33px;
   }
@@ -1002,10 +1031,10 @@ footer {
     font-size: 39.94px;
     padding: 15px 32px;
   }
-  .backRama::before {
-    top: -109px;
-    left: 11%;
-  }
+  // .backRama::before {
+  //   top: -109px;
+  //   left: 11%;
+  // }
 
   @media (max-height: 841px) {
     .galeria .slick-prev,
@@ -1094,6 +1123,10 @@ footer {
     font-size: 68.06px;
     width: 469px;
   }
+
+  .about .context .part2 h2::before {
+    left: 194px;
+  }
   .about .context .part2 h3 {
     font-size: 31px;
   }
@@ -1147,10 +1180,10 @@ footer {
   //   display: block;
   //   width: 362px;
   // }
-  .backRama::before {
-    transform: scale(0.96);
-    top: -137px;
-  }
+  // .backRama::before {
+  //   transform: scale(0.96);
+  //   top: -137px;
+  // }
 }
 
 @media (max-width: 1270px) and (min-width: 1025px) {
@@ -1162,6 +1195,9 @@ footer {
     font-size: 65px;
     width: 469px;
     line-height: 55px;
+  }
+  .about .context .part2 h2::before {
+    left: 182px;
   }
   .about .context .part2 h3 {
     margin-top: 21px;
@@ -1180,6 +1216,9 @@ footer {
       width: 444px;
       line-height: 55px;
     }
+    .about .context .part2 h2::before {
+      left: 170px;
+    }
     .about .context .part2 h3 {
       font-size: 28px;
     }
@@ -1193,9 +1232,9 @@ footer {
       width: 424px;
       height: 507px;
     }
-    .backRama::before {
-      display: none;
-    }
+    // .backRama::before {
+    //   display: none;
+    // }
   }
 }
 
@@ -1781,8 +1820,12 @@ footer {
     font-size: 33px;
     line-height: 33px;
   }
-  #navigation {
-    padding: 33px 0 !important;
+  // #navigation {
+  //   padding: 33px 0 !important;
+  // }
+  .reels,
+  .galeria {
+    padding-top: 88px;
   }
 
   .home .context {
