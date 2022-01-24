@@ -87,9 +87,9 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        // infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1025,
@@ -118,9 +118,9 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 4.35,
         slidesToScroll: 1,
-        // infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1441,
