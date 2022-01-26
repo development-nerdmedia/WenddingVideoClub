@@ -169,6 +169,11 @@ a.cerrar {
       }
     }
   }
+
+  .mac .home .part2 p {
+    left: 70%;
+  }
+
   .part2 {
     width: 50%;
     position: relative;
@@ -619,7 +624,7 @@ a.cerrar {
   }
   .close {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     a {
       img {
         width: 45px;
@@ -627,7 +632,7 @@ a.cerrar {
     }
   }
   .menulist {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -680,7 +685,7 @@ a.cerrar {
   }
   .close {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     a {
       img {
         width: 60px;
@@ -744,6 +749,7 @@ a.cerrar {
             border: none;
             border-bottom: 1px solid #000;
             font-size: 18px;
+            width: 100%;
           }
           input[type="email"] {
             margin-bottom: 35px;
@@ -755,6 +761,7 @@ a.cerrar {
             margin-bottom: 30px;
             font-size: 18px;
             height: 130px;
+            width: 100%;
           }
           input[type="submit"] {
             width: 270px;
@@ -1807,6 +1814,16 @@ footer {
 }
 
 @media (max-width: 425px) {
+  .reels .slick-slide {
+    img {
+      display: none;
+    }
+  }
+  .reels .autoplay .slick-slide video {
+    display: block !important;
+    width: 100%;
+  }
+
   .reels .slick-prev,
   .reels .slick-next {
     top: -72px;
@@ -1901,11 +1918,11 @@ footer {
     font-size: 40px;
     line-height: 40px;
   }
-  .contactopage .center .title p {
-    display: block;
-    margin-top: 5px;
-    font-size: 21px;
-  }
+  // .contactopage .center .title p {
+  //   display: block;
+  //   margin-top: 5px;
+  //   font-size: 21px;
+  // }
   .contactopage .content::before {
     width: 164px;
     transform: scale(0.5);
@@ -1935,6 +1952,17 @@ footer {
     width: 220px;
     height: 57px;
   }
+
+  .contactopage
+    .center
+    .contenido-formulario
+    form
+    fieldset
+    input[type="text"]:focus-visible {
+    outline: none !important;
+    border: none !important;
+  }
+
   .contactopage .content::after {
     content: none;
   }
@@ -1959,6 +1987,10 @@ footer {
   .contactopage .center .contenido-formulario,
   .parrafoMovil {
     width: 100%;
+  }
+
+  .contactopage .center .title h2 {
+    width: 300px;
   }
   .thanks .content .textThank::before {
     top: -198px;
@@ -2090,6 +2122,15 @@ footer {
       left: 55%;
       transform: scale(0.8) rotate(-45deg);
     }
+  }
+}
+
+@media (max-width: 377px) {
+  .parrafoMovil h2,
+  .parrafoMovil p {
+    font-family: var(--fuente-montserrat);
+    font-size: 23px;
+    font-weight: 400;
   }
 }
 

@@ -139,6 +139,8 @@ a.cerrar {
       overflow: hidden; }
       .home .part1 a:hover {
         color: #000; }
+  .home .mac .home .part2 p {
+    left: 70%; }
   .home .part2 {
     width: 50%;
     position: relative;
@@ -488,11 +490,11 @@ a.cerrar {
     opacity: 0.8; }
   .menumovil .close {
     display: flex;
-    justify-content: end; }
+    justify-content: flex-end; }
     .menumovil .close a img {
       width: 45px; }
   .menumovil .menulist {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
     display: flex;
     align-items: center;
     justify-content: space-around; }
@@ -537,7 +539,7 @@ a.cerrar {
     opacity: 0.8; }
   .contactopage .close {
     display: flex;
-    justify-content: end; }
+    justify-content: flex-end; }
     .contactopage .close a img {
       width: 60px; }
   .contactopage .center {
@@ -588,7 +590,8 @@ a.cerrar {
             height: 50px;
             border: none;
             border-bottom: 1px solid #000;
-            font-size: 18px; }
+            font-size: 18px;
+            width: 100%; }
           .contactopage .center .contenido-formulario form fieldset input[type="email"] {
             margin-bottom: 35px; }
           .contactopage .center .contenido-formulario form fieldset textarea {
@@ -597,7 +600,8 @@ a.cerrar {
             border-bottom: 1px solid #000;
             margin-bottom: 30px;
             font-size: 18px;
-            height: 130px; }
+            height: 130px;
+            width: 100%; }
           .contactopage .center .contenido-formulario form fieldset input[type="submit"] {
             width: 270px;
             background-color: #fff;
@@ -1401,6 +1405,11 @@ input[type="submit"] {
     padding: 11px 24px; } }
 
 @media (max-width: 425px) {
+  .reels .slick-slide img {
+    display: none; }
+  .reels .autoplay .slick-slide video {
+    display: block !important;
+    width: 100%; }
   .reels .slick-prev,
   .reels .slick-next {
     top: -72px;
@@ -1461,10 +1470,6 @@ input[type="submit"] {
   .contactopage .center .title h2 {
     font-size: 40px;
     line-height: 40px; }
-  .contactopage .center .title p {
-    display: block;
-    margin-top: 5px;
-    font-size: 21px; }
   .contactopage .content::before {
     width: 164px;
     transform: scale(0.5);
@@ -1488,6 +1493,14 @@ input[type="submit"] {
     font-size: 31px;
     width: 220px;
     height: 57px; }
+  .contactopage
+.center
+.contenido-formulario
+form
+fieldset
+input[type="text"]:focus-visible {
+    outline: none !important;
+    border: none !important; }
   .contactopage .content::after {
     content: none; }
   .parrafoMovil {
@@ -1507,6 +1520,8 @@ input[type="submit"] {
   .contactopage .center .contenido-formulario,
   .parrafoMovil {
     width: 100%; }
+  .contactopage .center .title h2 {
+    width: 300px; }
   .thanks .content .textThank::before {
     top: -198px;
     opacity: 0.8;
@@ -1603,6 +1618,13 @@ input[type="submit"] {
     top: -98px;
     left: 55%;
     transform: scale(0.8) rotate(-45deg); } }
+
+@media (max-width: 377px) {
+  .parrafoMovil h2,
+  .parrafoMovil p {
+    font-family: var(--fuente-montserrat);
+    font-size: 23px;
+    font-weight: 400; } }
 
 @media (max-width: 400px) {
   .home .part1 h1 {

@@ -1,3 +1,8 @@
+
+if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+    $("body").addClass("mac");
+}
+
 var header = document.getElementById('header');
 var titlenav = document.getElementById('title');
 var titlenavback = document.getElementById('title2');
@@ -8,6 +13,11 @@ var btnmusicblanco = document.getElementById('white');
 var btnmusicnegro = document.getElementById('black');
 var menumovilblanco = document.getElementById('white1');
 var menumoviloscuro = document.getElementById('black1');
+var inputname = document.getElementById('full-name');
+
+var inputnamedata = inputname.getAttribute("data-focus-visible-added")
+
+
 
 window.addEventListener('scroll', () => {
     var scroll = window.scrollY
@@ -77,6 +87,10 @@ document.addEventListener("click", function (e) {
     if (e.target.closest(".cerrarr")) {
         document.querySelector(".menumovil").classList.toggle("open");
         jQuery('body').removeClass('scrollhidden');
+    }
+    if (e.target.closest("#full-name")) {
+        jQuery("#full-name").removeClass('focus-visible');
+        inputname.removeAttribute('data-focus-visible-added');
     }
 })
 
