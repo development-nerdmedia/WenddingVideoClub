@@ -19,6 +19,10 @@ main {
   overflow: hidden;
 }
 
+.player .vp-sidedock {
+  display: none !important;
+}
+
 header {
   height: auto;
   width: 100%;
@@ -216,6 +220,8 @@ a.cerrar {
   video {
     min-width: 100%;
     min-height: 100%;
+    // position: relative;
+    // left: -2px;
   }
   //   position: absolute;
   //   left: 0;
@@ -394,6 +400,7 @@ a.cerrar {
       video {
         display: none;
         border-radius: 20px;
+        width: 100%;
       }
     }
     .slick-slide:hover {
@@ -440,6 +447,7 @@ a.cerrar {
   .slick-prev {
     background-image: url(../img/flecha1.svg) !important;
     background-size: 100% !important;
+    background-repeat: no-repeat;
   }
 
   .reels .autoplay .slick-slide video,
@@ -518,12 +526,12 @@ a.cerrar {
   .slick-next {
     background-image: url(../img/flecha2.svg) !important;
     background-size: 100% !important;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
   }
   .slick-prev {
     background-image: url(../img/flecha1.svg) !important;
     background-size: 100% !important;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
   }
 }
 
@@ -551,6 +559,10 @@ a.cerrar {
           text-decoration: none;
           padding: 15px 50px;
           border-radius: 17px;
+          overflow: hidden;
+          &:hover {
+            color: #fff;
+          }
         }
         a.instagram {
           padding: 15px 30px;
@@ -719,11 +731,46 @@ a.cerrar {
     .contenido-formulario {
       padding-left: 50px;
       width: 40%;
+      transform: translateY(17px);
       h2,
       p {
         font-family: var(--fuente-montserrat);
         font-size: 35px;
         font-weight: 400;
+      }
+      #fs-frm input:focus,
+      #fs-frm select:focus,
+      #fs-frm textarea:focus {
+        // background-color: rgba(255, 255, 255, 0.26);
+        outline-style: none;
+        // outline-width: thin;
+        // outline-color: gray;
+        // outline-offset: -1px;
+      }
+
+      #fs-frm input:focus,
+      #fs-frm textarea:focus {
+        border-bottom: 1px solid #000;
+      }
+      #fs-frm [type="button"],
+      #fs-frm [type="submit"],
+      #fs-frm [type="reset"] {
+        cursor: pointer;
+        // border: 2px solid #bb9d65;
+        line-height: 0px;
+        border-radius: 20px;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+      }
+      #fs-frm [type="submit"]:hover {
+        cursor: pointer;
+        color: white;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        transition: all 0.2s linear;
+        background-color: #000;
       }
       form {
         margin-top: 20px;
@@ -758,7 +805,7 @@ a.cerrar {
             font-family: var(--fuente-titulo);
             border: none;
             border-bottom: 1px solid #000;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
             font-size: 18px;
             height: 130px;
             width: 100%;
@@ -842,7 +889,7 @@ footer {
   right: 100%;
   bottom: 0;
   background: #ffffff;
-  height: 4px;
+  height: 2px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -933,7 +980,7 @@ footer {
   transform: scaleX(1);
 }
 
-/* Sweep To Right */
+/* Sweep To Right black */
 .hvr-sweep-to-right-black {
   display: inline-block;
   vertical-align: middle;
@@ -1150,9 +1197,9 @@ footer {
   .thanks .content .textThank h1 {
     font-size: 70px;
   }
-  .thanks .content .textThank .btn {
-    height: 65px;
-  }
+  // .thanks .content .textThank .btn {
+  //   height: 65px;
+  // }
   .thanks .content .textThank::before {
     top: -179px;
     opacity: 0.8;
@@ -1272,7 +1319,7 @@ footer {
     }
     .thanks .content .textThank .btn {
       width: 234px;
-      margin-top: 70px;
+      margin-top: 36px;
       a,
       a.instagram {
         font-size: 31px;
@@ -1814,6 +1861,9 @@ footer {
 }
 
 @media (max-width: 425px) {
+  .contactopage .center .contenido-formulario {
+    transform: translateY(0px);
+  }
   .reels .slick-slide {
     img {
       display: none;
@@ -2014,7 +2064,7 @@ footer {
   }
   .thanks .content .textThank .btn {
     width: 234px;
-    margin-top: 70px;
+    margin-top: 36px;
     a,
     a.instagram {
       font-size: 31px;

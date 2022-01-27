@@ -40,16 +40,16 @@
                 ><img id="white" src="img/btnNavbar.svg" alt="" /><img
                   id="black"
                   src="img/btnNarvar-black.svg"
-                  alt=""
+                  alt="music"
               /></a>
             </li>
           </ul>
           <div class="menuMovil">
             <a href="#menu" class="menumovill">
-              <img id="white1" src="img/menumovil-claro.svg" alt=""
+              <img id="white1" src="img/menumovil-claro.svg" alt="menu"
             /></a>
             <a href="#menu" class="menumovill">
-              <img id="black1" src="img/menumoviloscuro.svg" alt=""
+              <img id="black1" src="img/menumoviloscuro.svg" alt="menu"
             /></a>
           </div>
         </div>
@@ -77,8 +77,9 @@
                     id="fs-frm"
                     name="complaint-form"
                     accept-charset="utf-8"
-                    action="thanks.html"
-                    method=""
+                    action="php/thanks.php
+                    method="post"
+                    class="formulario containerform"
                   >
                     <fieldset id="fs-frm-inputs">
                       <input
@@ -97,7 +98,7 @@
                       />
                       <input
                         type="email"
-                        name="_replyto"
+                        name="email"
                         id="email-address"
                         placeholder="Email"
                         required=""
@@ -109,7 +110,11 @@
                         placeholder="Describe el presupueto que necesitas"
                         required=""
                       ></textarea>
-                      <input class="btnEnviar" type="submit" value="Enviar" />
+                      <input
+                        class="btnEnviar hvr-sweep-to-right"
+                        type="submit"
+                        value="Enviar"
+                      />
                     </fieldset>
                   </form>
                 </div>

@@ -15,6 +15,9 @@
 main {
   overflow: hidden; }
 
+.player .vp-sidedock {
+  display: none !important; }
+
 header {
   height: auto;
   width: 100%;
@@ -305,7 +308,8 @@ a.cerrar {
     width: 100%; }
   .reels .autoplay .slick-slide video {
     display: none;
-    border-radius: 20px; }
+    border-radius: 20px;
+    width: 100%; }
 
 .reels .autoplay .slick-slide:hover img {
   display: none;
@@ -342,7 +346,8 @@ a.cerrar {
 
 .reels .slick-prev {
   background-image: url(../img/flecha1.svg) !important;
-  background-size: 100% !important; }
+  background-size: 100% !important;
+  background-repeat: no-repeat; }
 
 .reels .reels .autoplay .slick-slide video,
 .reels .reels .autoplay .slick-slide video {
@@ -403,12 +408,12 @@ a.cerrar {
 .galeria .slick-next {
   background-image: url(../img/flecha2.svg) !important;
   background-size: 100% !important;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat !important; }
 
 .galeria .slick-prev {
   background-image: url(../img/flecha1.svg) !important;
   background-size: 100% !important;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat !important; }
 
 /*Page thanks*/
 .thanks .content {
@@ -430,7 +435,10 @@ a.cerrar {
       font-weight: 300;
       text-decoration: none;
       padding: 15px 50px;
-      border-radius: 17px; }
+      border-radius: 17px;
+      overflow: hidden; }
+      .thanks .content .textThank .btn a:hover {
+        color: #fff; }
     .thanks .content .textThank .btn a.instagram {
       padding: 15px 30px; }
   .thanks .content .textThank .titleThanks {
@@ -564,12 +572,37 @@ a.cerrar {
         font-size: 26px; }
     .contactopage .center .contenido-formulario {
       padding-left: 50px;
-      width: 40%; }
+      width: 40%;
+      transform: translateY(17px); }
       .contactopage .center .contenido-formulario h2,
       .contactopage .center .contenido-formulario p {
         font-family: var(--fuente-montserrat);
         font-size: 35px;
         font-weight: 400; }
+      .contactopage .center .contenido-formulario #fs-frm input:focus,
+      .contactopage .center .contenido-formulario #fs-frm select:focus,
+      .contactopage .center .contenido-formulario #fs-frm textarea:focus {
+        outline-style: none; }
+      .contactopage .center .contenido-formulario #fs-frm input:focus,
+      .contactopage .center .contenido-formulario #fs-frm textarea:focus {
+        border-bottom: 1px solid #000; }
+      .contactopage .center .contenido-formulario #fs-frm [type="button"],
+      .contactopage .center .contenido-formulario #fs-frm [type="submit"],
+      .contactopage .center .contenido-formulario #fs-frm [type="reset"] {
+        cursor: pointer;
+        line-height: 0px;
+        border-radius: 20px;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button; }
+      .contactopage .center .contenido-formulario #fs-frm [type="submit"]:hover {
+        cursor: pointer;
+        color: white;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        transition: all 0.2s linear;
+        background-color: #000; }
       .contactopage .center .contenido-formulario form {
         margin-top: 20px; }
         .contactopage .center .contenido-formulario form fieldset {
@@ -598,7 +631,7 @@ a.cerrar {
             font-family: var(--fuente-titulo);
             border: none;
             border-bottom: 1px solid #000;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
             font-size: 18px;
             height: 130px;
             width: 100%; }
@@ -666,7 +699,7 @@ footer {
   right: 100%;
   bottom: 0;
   background: #ffffff;
-  height: 4px;
+  height: 2px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -754,7 +787,7 @@ footer {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
 
-/* Sweep To Right */
+/* Sweep To Right black */
 .hvr-sweep-to-right-black {
   display: inline-block;
   vertical-align: middle;
@@ -920,8 +953,6 @@ input[type="submit"] {
     padding: 11px 45px; }
   .thanks .content .textThank h1 {
     font-size: 70px; }
-  .thanks .content .textThank .btn {
-    height: 65px; }
   .thanks .content .textThank::before {
     top: -179px;
     opacity: 0.8;
@@ -1003,7 +1034,7 @@ input[type="submit"] {
     font-size: 24px; }
   .thanks .content .textThank .btn {
     width: 234px;
-    margin-top: 70px; }
+    margin-top: 36px; }
     .thanks .content .textThank .btn a,
     .thanks .content .textThank .btn a.instagram {
       font-size: 31px;
@@ -1405,6 +1436,8 @@ input[type="submit"] {
     padding: 11px 24px; } }
 
 @media (max-width: 425px) {
+  .contactopage .center .contenido-formulario {
+    transform: translateY(0px); }
   .reels .slick-slide img {
     display: none; }
   .reels .autoplay .slick-slide video {
@@ -1539,7 +1572,7 @@ input[type="text"]:focus-visible {
     font-size: 24px; }
   .thanks .content .textThank .btn {
     width: 234px;
-    margin-top: 70px; }
+    margin-top: 36px; }
     .thanks .content .textThank .btn a,
     .thanks .content .textThank .btn a.instagram {
       font-size: 31px;
