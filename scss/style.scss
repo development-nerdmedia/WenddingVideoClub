@@ -217,7 +217,7 @@ a.cerrar {
   height: 100vh;
   overflow: hidden;
   z-index: -3;
-  video {
+  iframe {
     min-width: 100%;
     min-height: 100%;
     // position: relative;
@@ -397,7 +397,8 @@ a.cerrar {
       img {
         width: 100%;
       }
-      video {
+      iframe,
+      .contenedorVideo {
         display: none;
         border-radius: 20px;
         width: 100%;
@@ -409,7 +410,8 @@ a.cerrar {
         animation: ocultar 0.8s ease;
         animation-fill-mode: forwards;
       }
-      video {
+      iframe,
+      .contenedorVideo {
         display: block;
         width: 100%;
       }
@@ -450,8 +452,8 @@ a.cerrar {
     background-repeat: no-repeat;
   }
 
-  .reels .autoplay .slick-slide video,
-  .reels .autoplay .slick-slide video {
+  .reels .autoplay .slick-slide iframe,
+  .reels .autoplay .slick-slide iframe {
     width: 100%;
   }
 }
@@ -1869,7 +1871,8 @@ footer {
       display: none;
     }
   }
-  .reels .autoplay .slick-slide video {
+  .reels .autoplay .slick-slide iframe,
+  .reels .autoplay .slick-slide .contenedorVideo {
     display: block !important;
     width: 100%;
   }

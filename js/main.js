@@ -1,7 +1,11 @@
-
 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
     $("body").addClass("mac");
 }
+
+var reproductor = document.getElementById("musica");
+reproductor.volume = 0.02;
+
+var vol = new Boolean(true);
 
 var header = document.getElementById('header');
 var titlenav = document.getElementById('title');
@@ -14,7 +18,7 @@ var btnmusicnegro = document.getElementById('black');
 var menumovilblanco = document.getElementById('white1');
 var menumoviloscuro = document.getElementById('black1');
 var inputname = document.getElementById('full-name');
-
+var muteaudio = document.getElementById('mute')
 var inputnamedata = inputname.getAttribute("data-focus-visible-added")
 
 
@@ -71,6 +75,15 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener("click", function (e) {
+    if (e.target.closest(".muted")) {
+        if (vol == true) {
+            reproductor.volume = 0;
+            vol = false;
+        } else {
+            reproductor.volume = 0.02;
+            vol = true;
+        }
+    }
     if (e.target.closest(".contacto")) {
         document.querySelector(".contactopage").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
@@ -101,9 +114,9 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // infinite: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1025,
