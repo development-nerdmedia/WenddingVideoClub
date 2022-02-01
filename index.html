@@ -11,7 +11,7 @@
     <title>Wendding Video Club</title>
   </head>
   <body>
-    <audio id="musica" class="audio" autoplay loop>
+    <audio id="musica" class="audio" autoplay loop muted>
       <source src="audio/prueba-musica-loop.mp3" type="audio/mpeg" />
       <source src="audio/prueba-musica-loop.wav" type="audio/wav" />
     </audio>
@@ -41,12 +41,14 @@
               <a class="nav-item contacto">contacto</a>
             </li>
             <li class="icon">
-              <a href="#" id="mute" class="muted"
-                ><img id="white" src="img/btnNavbar.svg" alt="" /><img
+              <a id="mute" class="muted"
+                ><img id="white" src="img/btnNavbar.svg" alt="music" /><img
                   id="black"
                   src="img/btnNarvar-black.svg"
                   alt="music"
-              /></a>
+                />
+                <span class="on">on</span>
+              </a>
             </li>
           </ul>
           <div class="menuMovil">
@@ -157,27 +159,37 @@
       </section>
       <section class="home">
         <div class="home-bg">
-          <div style="padding: 53.33% 0 0 0; position: relative">
-            <iframe
-              src="https://player.vimeo.com/video/670347837?h=20d4b9a3ee&autoplay=1&loop=1&title=0&byline=0&portrait=0"
-              style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 1920px;
-                height: 1024px;
-              "
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <iframe
+            src="https://player.vimeo.com/video/670347837?h=20d4b9a3ee&autoplay=1&loop=1&title=0&byline=0&portrait=0"
+            style="width: 1920px; height: 1024px"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <div class="container">
           <div class="context">
             <div class="part1">
-              <h1>Registramos momentos únicos en tu vida</h1>
+              <h1 class="content__container__text">Registramos</h1>
+              <div class="content__container">
+                <ul class="content__container__list">
+                  <li class="content__container__list__item">
+                    momentos unicos
+                  </li>
+                  <li class="content__container__list__item">
+                    momentos especiales
+                  </li>
+                  <li class="content__container__list__item">
+                    sueños memorables
+                  </li>
+                  <li class="content__container__list__item">
+                    sueños de encanto
+                  </li>
+                </ul>
+              </div>
+              <!-- <h1>en tu vida</h1> -->
+              <h1>en tu vida</h1>
               <p>
                 Sabemos lo especial que es este día y sabemos la planificación y
                 el esfuerzo que demanda
