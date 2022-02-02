@@ -246,11 +246,12 @@ a.cerrar {
   height: 100vh;
   overflow: hidden;
   z-index: -3;
+  video,
   iframe {
     min-width: 100%;
     min-height: 100%;
-    position: relative;
-    left: -3px;
+    // position: relative;
+    // left: -3px;
   }
   //   position: absolute;
   //   left: 0;
@@ -361,7 +362,7 @@ a.cerrar {
   position: relative;
 }
 .about .context .part2 h2::before {
-  content: url(../img/rosa.png);
+  content: url(https://nerdvideo.club/img/rosa.png);
   position: absolute;
   top: -85px;
   left: 226px;
@@ -407,7 +408,7 @@ a.cerrar {
 }
 
 .backRama::before {
-  content: url(../img/backabout.png);
+  content: url(https://nerdvideo.club/img/backabout.png);
   position: absolute;
   z-index: -2;
   top: -50px;
@@ -423,11 +424,16 @@ a.cerrar {
   .autoplay {
     .slick-slide {
       margin: 0 10px;
-      img {
+      img,
+      video {
         width: 100%;
       }
+      video {
+        border-radius: 20px;
+      }
       iframe,
-      .contenedorVideo {
+      .contenedorVideo,
+      video {
         display: none;
         border-radius: 20px;
         width: 100%;
@@ -440,7 +446,8 @@ a.cerrar {
         animation-fill-mode: forwards;
       }
       iframe,
-      .contenedorVideo {
+      .contenedorVideo,
+      video {
         display: block;
         width: 100%;
       }
@@ -471,12 +478,12 @@ a.cerrar {
   }
 
   .slick-next {
-    background-image: url(../img/flecha2.svg) !important;
+    background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat;
   }
   .slick-prev {
-    background-image: url(../img/flecha1.svg) !important;
+    background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat;
   }
@@ -555,12 +562,12 @@ a.cerrar {
   }
 
   .slick-next {
-    background-image: url(../img/flecha2.svg) !important;
+    background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
   }
   .slick-prev {
-    background-image: url(../img/flecha1.svg) !important;
+    background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
   }
@@ -618,7 +625,7 @@ a.cerrar {
       }
     }
     .textThank::before {
-      content: url(../img/rama3.png);
+      content: url(https://nerdvideo.club/img/rama3.png);
       position: absolute;
       right: 74px;
       top: -174px;
@@ -648,7 +655,7 @@ a.cerrar {
   z-index: 80;
   .content {
     &::before {
-      content: url(../img/rama1.png);
+      content: url(https://nerdvideo.club/img/rama1.png);
       width: 164px;
       transform: scale(0.5);
       position: absolute;
@@ -657,7 +664,7 @@ a.cerrar {
       opacity: 0.8;
     }
     &::after {
-      content: url(../img/rama2.png);
+      content: url(https://nerdvideo.club/img/rama2.png);
       position: absolute;
       transform: scale(0.5);
       right: -95px;
@@ -713,14 +720,14 @@ a.cerrar {
     position: relative;
   }
   .content::before {
-    content: url(../img/rama1.png);
+    content: url(https://nerdvideo.club/img/rama1.png);
     position: absolute;
     left: -146px;
     top: -79px;
     opacity: 0.8;
   }
   .content::after {
-    content: url(../img/rama2.png);
+    content: url(https://nerdvideo.club/img/rama2.png);
     position: absolute;
     right: -146px;
     bottom: -40px;
@@ -1615,7 +1622,6 @@ footer {
     font-size: 76.73px;
     position: relative;
     &::before {
-      content: url(../img/rosa.png);
       position: absolute;
       top: -85px;
       left: 226px;
@@ -1640,7 +1646,7 @@ footer {
       height: 574.72px;
     }
     &::before {
-      content: url(../img/ramaimagen.png);
+      content: url(https://nerdvideo.club/img/ramaimagen.png);
       width: 362.79px;
       height: 551.73px;
       position: absolute;
@@ -1671,7 +1677,7 @@ footer {
   .reels .autoplay {
     position: relative;
     &::before {
-      content: url(../img/ramasreels.png);
+      content: url(https://nerdvideo.club/img/ramasreels.png);
       position: absolute;
       top: -187px;
       left: 226px;
@@ -1697,7 +1703,7 @@ footer {
   .galeria .autoplay2 {
     position: relative;
     &::before {
-      content: url(../img/ramasgaleria.png);
+      content: url(https://nerdvideo.club/img/ramasgaleria.png);
       position: absolute;
       top: -329px;
       left: 267px;
@@ -1918,7 +1924,8 @@ footer {
     }
   }
   .reels .autoplay .slick-slide iframe,
-  .reels .autoplay .slick-slide .contenedorVideo {
+  .reels .autoplay .slick-slide .contenedorVideo,
+  .reels .autoplay .slick-slide video {
     display: block !important;
     width: 100%;
   }
