@@ -41,7 +41,8 @@ MyApp = {
     audio: {
         init: function () {
             var audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', '../audio/prueba-musica-loop.mp3');
+            var src = $('#audio_src').val();
+            audioElement.setAttribute('src', src);
 
             audioElement.addEventListener('ended', function () {
                 this.play();
