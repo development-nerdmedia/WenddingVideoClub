@@ -233,6 +233,11 @@ a.cerrar {
   }
 }
 
+.player .vp-sidedock,
+.player .vp-sidedock .sidedock-inner {
+  display: none !important;
+}
+
 .home-bg {
   position: absolute;
   top: 0;
@@ -244,6 +249,8 @@ a.cerrar {
   iframe {
     min-width: 100%;
     min-height: 100%;
+    position: relative;
+    left: -3px;
   }
   //   position: absolute;
   //   left: 0;
@@ -1067,6 +1074,10 @@ footer {
     line-height: 77px;
     width: 751px;
   }
+  .home .part1 li {
+    font-size: 79.5px;
+  }
+
   .home .part1 p {
     font-size: 26px;
     margin-bottom: 53px;
@@ -1166,6 +1177,10 @@ footer {
     line-height: 75px;
     width: 700px;
   }
+  .home .part1 li {
+    font-size: 75.3px;
+  }
+
   .home .part1 p {
     font-size: 23px;
     width: 700px;
@@ -1469,6 +1484,9 @@ footer {
       font-size: 65px;
       line-height: 65px;
       width: 614px;
+    }
+    .home .part1 li {
+      font-size: 65px;
     }
     .home .part1 p {
       font-size: 21px;
@@ -1788,6 +1806,9 @@ footer {
     line-height: 60px;
     width: 567px;
   }
+  .home .part1 li {
+    font-size: 60px;
+  }
   .home .part1 p {
     font-size: 21px;
     width: 529px;
@@ -1834,6 +1855,9 @@ footer {
     width: 427px;
     line-height: 50px;
     margin-bottom: 10px;
+  }
+  .home .part1 li {
+    font-size: 50px;
   }
   .home .part1,
   .home .part2 {
@@ -2214,6 +2238,9 @@ footer {
     font-size: 40px;
     line-height: 39px;
   }
+  .home .part1 li {
+    font-size: 40px;
+  }
   .home .part1 p {
     font-size: 18px;
   }
@@ -2228,7 +2255,7 @@ footer {
   }
 }
 
-.content {
+.contents {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2244,7 +2271,7 @@ footer {
   &__container {
     font-weight: 600;
     overflow: hidden;
-    height: 101px;
+    height: 94px;
     width: 870px;
 
     &__text {
@@ -2443,3 +2470,83 @@ footer {
 // x = 12.66 -> Time spent on a line
 
 // You can define a value and calculate the other if you want change speed or the number of lines
+.hidden {
+  display: none !important;
+}
+.load {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+  position: fixed;
+  z-index: 999;
+  transition: 0.6s ease;
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-family: var(--fuente-titulo);
+    font-size: 8vw;
+    font-weight: 600;
+    font-style: italic;
+    opacity: 0.1;
+    text-align: center;
+  }
+}
+
+.load.fade-out {
+  opacity: 0;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.obj {
+  width: 6px;
+  height: 0px;
+  background: black;
+  margin: 0 3px;
+  border-radius: 10px;
+  animation: loading 0.8s infinite;
+}
+.obj:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.obj:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.obj:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.obj:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.obj:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.obj:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.obj:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+@keyframes loading {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 0;
+  }
+}

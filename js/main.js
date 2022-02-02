@@ -1,11 +1,21 @@
+window.addEventListener("load", () => {
+    document.querySelector(".main").classList.remove("hidden");
+    document.querySelector(".home").classList.add("active");
+    /*  */
+    document.querySelector(".load").classList.add("fade-out");
+    setTimeout(() => {
+        document.querySelector(".load").style.display = "none";
+    }, 600);
+});
+
+
 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
     $("body").addClass("mac");
 }
 
 var reproductor = document.getElementById("musica");
-reproductor.volume = 0.02;
 
-var vol = new Boolean(true);
+var vol = new Boolean(false);
 
 var header = document.getElementById('header');
 var titlenav = document.getElementById('title');
@@ -20,7 +30,38 @@ var menumoviloscuro = document.getElementById('black1');
 var inputname = document.getElementById('full-name');
 var muteaudio = document.getElementById('mute')
 var inputnamedata = inputname.getAttribute("data-focus-visible-added")
+var interruptorid = document.getElementById('interruptor');
 
+jQuery(document).ready(function (argument) {
+    MyApp.audio.init();
+})
+
+
+MyApp = {
+    audio: {
+        init: function () {
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', '../audio/prueba-musica-loop.mp3');
+
+            audioElement.addEventListener('ended', function () {
+                this.play();
+            }, false);
+
+            $('#mute').click(function () {
+                if (vol == false) {
+                    document.getElementById("interruptor").innerHTML = "off";
+                    vol = true;
+                    audioElement.play();
+                    audioElement.volume = 0.05;
+                } else {
+                    document.getElementById("interruptor").innerHTML = "on";
+                    vol = false;
+                    audioElement.pause();
+                }
+            });
+        }
+    }
+}
 
 
 window.addEventListener('scroll', () => {
@@ -38,6 +79,7 @@ window.addEventListener('scroll', () => {
         menumovilblanco.style.display = "none"
         menumoviloscuro.style.display = "block"
         btnmusicnegro.style.display = "block";
+        interruptorid.style.color = "#000";
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left-black');
 
@@ -60,8 +102,9 @@ window.addEventListener('scroll', () => {
         nav.style.alignItems = "start";
         btnmusicblanco.style.display = "block";
         btnmusicnegro.style.display = "none";
-        menumoviloscuro.style.display = "none"
-        menumovilblanco.style.display = "block"
+        menumoviloscuro.style.display = "none";
+        menumovilblanco.style.display = "block";
+        interruptorid.style.color = "#fff";
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left-black');
 
@@ -75,15 +118,18 @@ window.addEventListener('scroll', () => {
 })
 
 document.addEventListener("click", function (e) {
-    if (e.target.closest(".muted")) {
-        if (vol == true) {
-            reproductor.volume = 0;
-            vol = false;
-        } else {
-            reproductor.volume = 0.02;
-            vol = true;
-        }
-    }
+    // if (e.target.closest(".muted")) {
+    //     if (vol == true) {
+    //         reproductor.volume = 0.02;
+    //         vol = false;
+    //         document.getElementById("musica").removeAttribute("muted");
+    //         document.getElementById("interruptor").innerHTML = "off";
+    //     } else {
+    //         reproductor.volume = 0;
+    //         vol = true;
+    //         document.getElementById("interruptor").innerHTML = "on";
+    //     }
+    // }
     if (e.target.closest(".contacto")) {
         document.querySelector(".contactopage").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
