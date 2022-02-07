@@ -12,6 +12,51 @@
   --fuente-texto: "Josefin Sans", sans-serif;
   --fuente-montserrat: "Montserrat", sans-serif; }
 
+/* change cursor */
+body {
+  cursor: url(../cursor/radio-on-button.png), pointer; }
+
+button#btn3-2:hover,
+button#btn1:hover,
+button#btn3-1:hover,
+.contactopage .center .contenido-formulario #fs-frm [type="submit"]:hover {
+  cursor: url(../cursor/grifo.png), pointer; }
+
+.contactopage .center .contenido-formulario form fieldset input,
+.contactopage .center .contenido-formulario form fieldset textarea,
+.contactopage .center .contenido-formulario form fieldset {
+  cursor: url(../cursor/grifoblack.png), pointer; }
+
+section.contactopage {
+  cursor: url(../cursor/correo.png), pointer; }
+
+.nav-item:hover,
+ul li.icon .muted span:hover {
+  cursor: url(../cursor/grifo.png), pointer; }
+
+section.about {
+  cursor: url(../cursor/brujula52.png), pointer; }
+
+section.reels {
+  cursor: url(../cursor/film.png), pointer; }
+  section.reels .reels .autoplay .slick-slide:hover {
+    cursor: url(../cursor/film.png), pointer; }
+
+section.galeria {
+  cursor: url(../cursor/camara.png), pointer; }
+
+footer {
+  cursor: default; }
+
+footer h3.order1 {
+  cursor: url(../cursor/ubicacion.png), pointer; }
+
+footer h3.order2 {
+  cursor: url(../cursor/correo-electronico.png), pointer; }
+
+footer h3.order3 {
+  cursor: url(../cursor/telephone.png), pointer; }
+
 main {
   overflow: hidden; }
 
@@ -119,6 +164,16 @@ a.cerrar {
   align-items: center;
   position: relative;
   overflow: hidden; }
+  .home::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: -2; }
   .home .context {
     margin-top: 100px;
     display: flex;
@@ -146,7 +201,7 @@ a.cerrar {
       line-height: 36px;
       color: white;
       width: 783px;
-      margin-bottom: 65px; }
+      margin-bottom: 60px; }
     .home .part1 a {
       color: white;
       text-decoration: none;
@@ -246,7 +301,7 @@ a.cerrar {
         font-size: 35px;
         font-weight: 600;
         margin-top: 10px; }
-      .about .context .part2 p {
+      .about .context .part2 p.parrafo {
         font-family: var(--fuente-montserrat);
         font-size: 26px;
         line-height: 36px;
@@ -254,7 +309,7 @@ a.cerrar {
         padding-top: 30px; }
       .about .context .part2 .btn {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: 36px; }
       .about .context .part2 a {
         font-family: var(--fuente-texto);
@@ -326,10 +381,13 @@ a.cerrar {
   display: none !important; }
 
 .reels .autoplay .slick-slide {
-  margin: 0 10px; }
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 20px; }
   .reels .autoplay .slick-slide img,
   .reels .autoplay .slick-slide video {
-    width: 100%; }
+    width: 100%;
+    animation: zoomInOut 20s ease infinite; }
   .reels .autoplay .slick-slide video {
     border-radius: 20px; }
   .reels .autoplay .slick-slide iframe,
@@ -412,9 +470,19 @@ a.cerrar {
   height: 51px; }
 
 .galeria .slick-slide {
-  margin: 0 10px; }
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 20px; }
   .galeria .slick-slide img {
-    width: 100%; }
+    width: 100%;
+    animation: zoomInOut 20s ease infinite; }
+  .galeria .slick-slide img[src$="gif"] {
+    display: none; }
+  .galeria .slick-slide:hover img {
+    display: none; }
+  .galeria .slick-slide:hover img[src$="gif"] {
+    display: block;
+    animation: zoomInOut 20s ease infinite; }
 
 .galeria .slick-next {
   right: 319px;
@@ -626,7 +694,6 @@ a.cerrar {
         -moz-appearance: button;
         appearance: button; }
       .contactopage .center .contenido-formulario #fs-frm [type="submit"]:hover {
-        cursor: pointer;
         color: white;
         -webkit-appearance: button;
         -moz-appearance: button;
@@ -674,8 +741,7 @@ a.cerrar {
             font-size: 43px;
             font-weight: 300;
             border-radius: 18px;
-            height: 77px;
-            cursor: pointer; }
+            height: 77px; }
   .contactopage .form {
     display: flex;
     flex-direction: column; }
@@ -864,6 +930,192 @@ footer {
 .parrafoMovil {
   display: none; }
 
+/*btn1*/
+/* From cssbuttons.io by @menezes11 */
+button#btn1 {
+  position: relative;
+  font-family: var(--fuente-texto);
+  font-size: 42.33px;
+  line-height: 42.33px;
+  font-weight: 300;
+  padding: 10px 45px;
+  outline: none;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 18px; }
+
+button#btn1:hover {
+  box-shadow: 0 0 10px white, 0 0 25px white, 0 0 50px white;
+  background-color: black; }
+
+button#btn1 span {
+  position: absolute; }
+
+button#btn1 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, white); }
+
+button#btn1:hover span:nth-child(1) {
+  left: 100%; }
+
+button#btn1 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, white); }
+
+button#btn1:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s; }
+
+button#btn1 span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ae00ff); }
+
+button#btn1:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s; }
+
+button#btn1 span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #001eff); }
+
+button#btn1:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s; }
+
+button#btn1:active {
+  background: #ae00af;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 8px white;
+  transition: 0.1s; }
+
+button#btn1:active
+span:nth-child(1)
+span:nth-child(2)
+span:nth-child(2)
+span:nth-child(2) {
+  transition: none;
+  transition-delay: none; }
+
+/*btn3-1*/
+/* From cssbuttons.io by @Sergestra */
+button#btn3-1 {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  border-radius: 16.93px;
+  overflow: hidden;
+  border: 1px solid #000; }
+
+button#btn3-1 div {
+  transform: translateY(0px);
+  width: 100%; }
+
+button#btn3-1,
+button#btn3-1 div {
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+
+button#btn3-1 div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+  font-family: var(--fuente-texto);
+  font-size: 42.33px;
+  font-weight: 300;
+  line-height: 42.33px;
+  padding: 15px 45px; }
+
+button#btn3-1 div span p {
+  font-size: 42.33px;
+  font-weight: 300; }
+
+button#btn3-1 div:nth-child(1) {
+  background-color: white; }
+
+button#btn3-1 div:nth-child(2) {
+  background-color: black; }
+
+button#btn3-1:hover div {
+  transform: translateY(-82px); }
+
+button#btn3-1 div:nth-child(1) p {
+  color: black; }
+
+button#btn3-1 div:nth-child(2) p {
+  color: white; }
+
+/*btn3-1*/
+/* From cssbuttons.io by @Sergestra */
+button#btn3-2 {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  border-radius: 16.93px;
+  overflow: hidden;
+  border: 1px solid #000; }
+
+button#btn3-2 div {
+  transform: translateY(0px);
+  width: 100%; }
+
+button#btn3-2,
+button#btn3-2 div {
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+
+button#btn3-2 div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+  font-family: var(--fuente-texto);
+  font-size: 42.33px;
+  font-weight: 300;
+  line-height: 42.33px;
+  padding: 15px 45px; }
+
+button#btn3-2 div span p {
+  font-size: 42.33px;
+  font-weight: 300; }
+
+button#btn3-2 div:nth-child(1) {
+  background-color: white; }
+
+button#btn3-2 div:nth-child(2) {
+  background-color: black; }
+
+button#btn3-2:hover div {
+  transform: translateY(-82px); }
+
+button#btn3-2 div:nth-child(1) p {
+  color: black; }
+
+button#btn3-2 div:nth-child(2) p {
+  color: white; }
+
 @media (max-width: 1440px) {
   .logo .title {
     font-size: 46px;
@@ -883,6 +1135,10 @@ footer {
   .home .part1 a {
     font-size: 35px;
     padding: 15px 34px; }
+  button#btn1 {
+    font-size: 35px;
+    padding: 15px 34px;
+    padding-bottom: 7px; }
   .about .context .part1 img {
     width: 548px; }
   .about .context .part2 h2 {
@@ -896,6 +1152,10 @@ footer {
     font-size: 24.53px; }
   .about .context .part2 a {
     font-size: 39.94px;
+    padding: 15px 32px; }
+  button#btn3-2 div span p {
+    font-size: 39.94px; }
+  button#btn3-2 div span {
     padding: 15px 32px; } }
 
 @media (max-width: 1440px) and (max-height: 841px) {
@@ -955,6 +1215,9 @@ input[type="submit"] {
   .home .part1 a {
     font-size: 32px;
     padding: 12px 34px; }
+  button#btn1 {
+    font-size: 32px;
+    padding: 12px 34px; }
   .home .part2 p {
     font-size: 26.88px; }
   .home .part2 p::before {
@@ -975,6 +1238,14 @@ input[type="submit"] {
   .about .context .part2 a {
     font-size: 37.55px;
     padding: 10px 32px; }
+  button#btn3-2 {
+    height: 62px; }
+  button#btn3-2 div span p {
+    font-size: 37.55px; }
+  button#btn3-2 div span {
+    padding: 10px 32px; }
+  button#btn3-2:hover div {
+    transform: translateY(-71px); }
   .reels .context h2,
   .galeria .context h2 {
     margin-bottom: 42px; }
@@ -985,6 +1256,16 @@ input[type="submit"] {
   .galeria .context .btn a {
     font-size: 37.55px;
     padding: 11px 45px; }
+  button#btn3-1 div span {
+    padding: 11px 45px; }
+  button#btn3-1 {
+    height: 64px; }
+  button#btn3-1 div span {
+    height: 48px; }
+  .reels .context .btn button#btn3-1 div span p {
+    font-size: 37.55px; }
+  button#btn3-1:hover div {
+    transform: translateY(-71px); }
   .thanks .content .textThank h1 {
     font-size: 70px; }
   .thanks .content .textThank::before {
@@ -1247,7 +1528,11 @@ input[type="submit"] {
     display: none; }
   .reels .context .btn,
   .galeria .context .btn {
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .about .context {
     display: block; }
   .about .context .part1 {
@@ -1399,6 +1684,9 @@ input[type="submit"] {
   .home .part1 a {
     font-size: 25px;
     padding: 9px 28px; }
+  button#btn1 {
+    font-size: 25px;
+    padding: 9px 28px; }
   .logo .title {
     font-size: 40px;
     line-height: 38px; }
@@ -1467,14 +1755,20 @@ input[type="submit"] {
 @media (max-width: 550px) and (min-width: 426px) {
   .reels .context .btn a {
     font-size: 30px;
-    padding: 11px 45px; } }
+    padding: 11px 45px; }
+  .reels .context .btn button#btn3-1 div span p {
+    font-size: 30px; } }
 
 @media (max-width: 550px) and (min-width: 426px) and (max-width: 460px) {
   .reels .context .btn a {
     font-size: 30px;
+    padding: 11px 24px; }
+  button#btn3-1 div span {
     padding: 11px 24px; } }
 
 @media (max-width: 425px) {
+  .home .part1 li {
+    font-size: 50px; }
   .contactopage .center .contenido-formulario {
     transform: translateY(0px); }
   .reels .slick-slide img {
@@ -1522,6 +1816,12 @@ input[type="submit"] {
     display: flex;
     justify-content: center;
     padding: 6px 0px; }
+  button#btn1 {
+    font-size: 31px;
+    display: flex;
+    justify-content: center;
+    padding: 6px 0px;
+    width: 100%; }
   .home .part2 {
     justify-content: center; }
   .home .part2 p {
@@ -1643,6 +1943,8 @@ input[type="text"]:focus-visible {
   .about .context .part2 a {
     font-size: 31px;
     padding-bottom: 4px; }
+  button#btn3-2 div span p {
+    font-size: 31px; }
   .reels .context h2,
   .galeria .context h2 {
     font-size: 40px; }
@@ -1656,6 +1958,16 @@ input[type="text"]:focus-visible {
     font-size: 30px;
     padding: 6px 21px;
     padding-bottom: 4px; }
+  .reels .context .btn button#btn3-1 div span p {
+    font-size: 30px; }
+  button#btn3-1 {
+    height: 52px; }
+  button#btn3-1 div span {
+    padding: 7.5px 21px; }
+  button#btn3-1 div span {
+    height: 43px; }
+  button#btn3-1:hover div {
+    transform: translateY(-58px); }
   .galeria .slick-prev,
   .galeria .slick-next {
     transform: translateX(286px); }
@@ -1710,10 +2022,14 @@ input[type="text"]:focus-visible {
     font-size: 18px; }
   .home .part1 a {
     font-size: 25px; }
+  button#btn1 {
+    font-size: 25px; }
   .reels .context .btn a {
     font-size: 25px;
     padding: 6px 21px;
-    padding-bottom: 4px; } }
+    padding-bottom: 4px; }
+  .reels .context .btn button#btn3-1 div span p {
+    font-size: 25px; } }
 
 .contents {
   position: absolute;

@@ -28,8 +28,7 @@ var btnmusicnegro = document.getElementById('black');
 var menumovilblanco = document.getElementById('white1');
 var menumoviloscuro = document.getElementById('black1');
 var inputname = document.getElementById('full-name');
-var muteaudio = document.getElementById('mute')
-var inputnamedata = inputname.getAttribute("data-focus-visible-added")
+var muteaudio = document.getElementById('mute');
 var interruptorid = document.getElementById('interruptor');
 
 jQuery(document).ready(function (argument) {
@@ -161,9 +160,9 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 2,
         slidesToScroll: 1,
-        // infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
             {
                 breakpoint: 1025,
