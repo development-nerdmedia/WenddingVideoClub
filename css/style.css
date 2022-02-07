@@ -366,11 +366,14 @@ a.cerrar {
       .galeria .context .btn a:hover {
         color: #fff; }
 
+.backRama {
+  position: relative; }
+
 .backRama::before {
   content: url(https://nerdvideo.club/img/backabout.png);
   position: absolute;
   z-index: -2;
-  top: 887px;
+  top: -50px;
   left: 22%;
   transform: scale(1.07);
   opacity: 0.8; }

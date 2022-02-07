@@ -470,13 +470,15 @@ a.cerrar {
 .containerback {
   // position: relative;
 }
-
+.backRama {
+  position: relative;
+}
 .backRama::before {
   content: url(https://nerdvideo.club/img/backabout.png);
   position: absolute;
   z-index: -2;
-  // top: -50px;
-  top: 887px;
+  top: -50px;
+  // top: 887px;
   left: 22%;
   transform: scale(1.07);
   opacity: 0.8;
