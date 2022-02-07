@@ -63,6 +63,7 @@ MyApp = {
     }
 }
 
+var mediaqueryList = window.matchMedia("(max-width: 425px)");
 
 window.addEventListener('scroll', () => {
     var scroll = window.scrollY
@@ -98,7 +99,7 @@ window.addEventListener('scroll', () => {
         titlenavback.style.color = "#fff";
         titlenav.style.display = "block";
         titlenavback.style.display = "none";
-        nav.style.padding = "70px 0";
+        // nav.style.padding = "70px 0";
         nav.style.alignItems = "start";
         btnmusicblanco.style.display = "block";
         btnmusicnegro.style.display = "none";
@@ -107,6 +108,12 @@ window.addEventListener('scroll', () => {
         interruptorid.style.color = "#fff";
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left-black');
+
+        if (mediaqueryList.matches) {
+            nav.style.padding = "35px 0";
+        } else {
+            nav.style.padding = "70px 0";
+        }
 
         for (var i = 0, len = lista.length; i < len; i++) {
             lista[i].style.color = "#fff";

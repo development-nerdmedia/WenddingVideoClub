@@ -2543,6 +2543,9 @@ button#btn3-2 div:nth-child(2) p {
   .contents__container__list__item {
     padding: 11px 0;
   }
+  .home .part1 p {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 550px) and (min-width: 426px) {
@@ -2929,6 +2932,9 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 400px) {
+  #navigation {
+    padding: 43px 0 !important;
+  }
   .home .part1 h1 {
     font-size: 50px;
     line-height: 39px;
