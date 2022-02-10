@@ -21,9 +21,14 @@ body {
   cursor: url(../cursor/radio-on-button.png) 32 32, pointer;
 }
 
+button {
+  -webkit-appearance: none;
+}
+
 button#btn3-2:hover,
 button#btn1:hover,
 button#btn3-1:hover,
+button#btn3-11:hover,
 .contactopage .center .contenido-formulario #fs-frm [type="submit"]:hover {
   cursor: url(../cursor/grifo.png), pointer;
 }
@@ -87,7 +92,6 @@ header {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  //   height: 100px;
   transition: 0.5s;
   z-index: 2;
 }
@@ -223,7 +227,6 @@ a.cerrar {
     width: 50%;
     ul {
       list-style: none;
-      // width: 870px;
       li {
         margin: 0;
         width: 100%;
@@ -237,7 +240,7 @@ a.cerrar {
       font-weight: 700;
       width: 799px;
     }
-    p {
+    p.parrafohome {
       margin-top: 5px;
       font-family: var(--fuente-montserrat);
       font-size: 30px;
@@ -314,20 +317,11 @@ a.cerrar {
   iframe {
     min-width: 100%;
     min-height: 100%;
-    // position: relative;
-    // left: -3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   height: 100%;
-  //   width: 100%;
-  //   background-image: url(../img/backHome.png);
-  //   background-attachment: fixed;
-  //   background-size: cover;
-  //   background-position: center;
-  //   z-index: -2;
-  //   animation: zoomInOut 20s ease infinite;
 }
 
 @keyframes zoomInOut {
@@ -343,15 +337,12 @@ a.cerrar {
 
 @keyframes up-down {
   0% {
-    // bottom: -150px;
     transform: translateY(0);
   }
   50% {
-    // bottom: -100px;
     transform: translateY(-50px);
   }
   100% {
-    // bottom: -150px;
     transform: translateY(0);
   }
 }
@@ -362,9 +353,6 @@ a.cerrar {
   padding-top: 150px;
   display: flex;
   align-items: center;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // background-position: center;
   .context {
     display: flex;
     justify-content: space-around;
@@ -426,7 +414,7 @@ a.cerrar {
   position: relative;
 }
 .about .context .part2 h2::before {
-  content: url(https://nerdvideo.club/img/rosa.png);
+  content: url(../img/rosa.png);
   position: absolute;
   top: -85px;
   left: 226px;
@@ -467,18 +455,14 @@ a.cerrar {
   }
 }
 
-// .containerback {
-// position: relative;
-// }
 .backRama {
   position: relative;
 }
 .backRama::before {
-  content: url(https://nerdvideo.club/img/backabout.png);
+  content: url(../img/backabout.png);
   position: absolute;
   z-index: -2;
   top: -50px;
-  // top: 887px;
   left: 22%;
   transform: scale(1.07);
   opacity: 0.8;
@@ -549,12 +533,12 @@ a.cerrar {
   }
 
   .slick-next {
-    background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
+    background-image: url(../img/flecha2.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat;
   }
   .slick-prev {
-    background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
+    background-image: url(../img/flecha1.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat;
   }
@@ -637,23 +621,18 @@ a.cerrar {
     transform: translateX(-1px);
   }
 
-  // .slick-next,
-  // .slick-prev {
-  //   transform: translateX(-50px);
-  // }
-
   .slick-next::before,
   .slick-prev::before {
     content: none !important;
   }
 
   .slick-next {
-    background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
+    background-image: url(../img/flecha2.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
   }
   .slick-prev {
-    background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
+    background-image: url(../img/flecha1.svg) !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
   }
@@ -661,11 +640,25 @@ a.cerrar {
 
 /*Page thanks*/
 .thanks {
+  .containererror {
+    height: calc(100% - 100px);
+  }
   .content {
     position: relative;
     .contenidoThnaks {
       justify-content: center;
       position: relative;
+    }
+    .contenterror {
+      transform: translateY(0) !important;
+      .textThank::before {
+        content: url(../img/rama3.png);
+        position: absolute;
+        right: -18px;
+        top: -234px;
+        opacity: 0.8;
+        z-index: -2;
+      }
     }
     .textThank {
       .btn {
@@ -692,6 +685,10 @@ a.cerrar {
           padding: 15px 30px;
         }
       }
+      .btnerror {
+        width: auto;
+        justify-content: center;
+      }
       .titleThanks {
         display: flex;
         text-align: center;
@@ -711,7 +708,7 @@ a.cerrar {
       }
     }
     .textThank::before {
-      content: url(https://nerdvideo.club/img/rama3.png);
+      content: url(../img/rama3.png);
       position: absolute;
       right: 74px;
       top: -174px;
@@ -748,7 +745,7 @@ a.cerrar {
   z-index: 80;
   .content {
     &::before {
-      content: url(https://nerdvideo.club/img/rama1.png);
+      content: url(../img/rama1.png);
       width: 164px;
       transform: scale(0.5);
       position: absolute;
@@ -757,7 +754,7 @@ a.cerrar {
       opacity: 0.8;
     }
     &::after {
-      content: url(https://nerdvideo.club/img/rama2.png);
+      content: url(../img/rama2.png);
       position: absolute;
       transform: scale(0.5);
       right: -95px;
@@ -813,14 +810,14 @@ a.cerrar {
     position: relative;
   }
   .content::before {
-    content: url(https://nerdvideo.club/img/rama1.png);
+    content: url(../img/rama1.png);
     position: absolute;
     left: -146px;
     top: -79px;
     opacity: 0.8;
   }
   .content::after {
-    content: url(https://nerdvideo.club/img/rama2.png);
+    content: url(../img/rama2.png);
     position: absolute;
     right: -146px;
     bottom: -40px;
@@ -872,7 +869,6 @@ a.cerrar {
       #fs-frm input:focus,
       #fs-frm select:focus,
       #fs-frm textarea:focus {
-        // background-color: rgba(255, 255, 255, 0.26);
         outline-style: none;
         // outline-width: thin;
         // outline-color: gray;
@@ -1264,6 +1260,75 @@ button#btn1:active
   transition-delay: none;
 }
 
+/*btn3-11*/
+/* From cssbuttons.io by @Sergestra */
+button#btn3-11 {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  border-radius: 16.93px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-color: transparent;
+  border: 1px solid #fff;
+  &:hover {
+    border: 1px solid #000;
+  }
+}
+
+button#btn3-11 div {
+  transform: translateY(0px);
+  width: 100%;
+}
+
+button#btn3-11,
+button#btn3-11 div {
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button#btn3-11 div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+  font-family: var(--fuente-texto);
+  font-size: 42.33px;
+  font-weight: 300;
+  line-height: 42.33px;
+  padding: 15px 45px;
+}
+
+button#btn3-11 div span p {
+  font-size: 42.33px;
+
+  font-weight: 300;
+}
+
+// button#btn3-11 div:nth-child(1) {
+// background-color: white;
+// }
+
+button#btn3-11 div:nth-child(2) {
+  background-color: black;
+}
+
+button#btn3-11:hover div {
+  transform: translateY(-82px);
+}
+
+button#btn3-11 div:nth-child(1) p {
+  // font-size: 17px;
+  // font-weight: bold;
+  color: white;
+}
+
+button#btn3-11 div:nth-child(2) p {
+  color: white;
+}
+
 /*btn3-1*/
 /* From cssbuttons.io by @Sergestra */
 button#btn3-1 {
@@ -1334,7 +1399,7 @@ button#btn3-1 div:nth-child(2) p {
   color: white;
 }
 
-/*btn3-1*/
+/*btn3-2*/
 /* From cssbuttons.io by @Sergestra */
 button#btn3-2 {
   outline: 0;
@@ -1480,7 +1545,7 @@ button#btn3-2 div:nth-child(2) p {
   -webkit-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   .cardBg {
-    background-image: url("http://nerdvideo.club/img/about.png");
+    background-image: url(../img/about.png);
     width: 100%;
     height: 100%;
   }
@@ -1610,6 +1675,18 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 1440px) {
+  button#btn3-11 {
+    height: 64px;
+  }
+  button#btn3-11 div span {
+    padding: 12px 34px;
+  }
+  button#btn3-11 div span p {
+    font-size: 35px;
+  }
+  button#btn3-11:hover div {
+    transform: translateY(-75px);
+  }
   .logo .title {
     font-size: 46px;
     line-height: 40px;
@@ -1627,7 +1704,7 @@ button#btn3-2 div:nth-child(2) p {
     font-size: 79.5px;
   }
 
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 26px;
     margin-bottom: 53px;
   }
@@ -1733,6 +1810,16 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 1280px) {
+  button#btn3-11 div span p {
+    font-size: 32px;
+  }
+  button#btn3-11 div span {
+    padding: 10px 34px;
+  }
+  button#btn3-11:hover div {
+    transform: translateY(-71px);
+  }
+
   .galeria .slick-next,
   .galeria .slick-prev {
     top: -104px;
@@ -1750,7 +1837,7 @@ button#btn3-2 div:nth-child(2) p {
     font-size: 75.3px;
   }
 
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 23px;
     width: 700px;
   }
@@ -1964,14 +2051,28 @@ button#btn3-2 div:nth-child(2) p {
       width: 100%;
       flex-direction: column;
     }
+    .thanks .content .textThank .btn.btnerror {
+      width: auto;
+      flex-direction: unset;
+    }
     .thanks .content .textThank .titleThanks {
       text-align: unset;
+    }
+    .thanks .content .textThank .error {
+      text-align: center;
     }
     .thanks .content .textThank h1 {
       font-size: 40px;
     }
     .thanks .content .textThank p {
       font-size: 24px;
+    }
+    .thanks .content .textThank .btn.btnerror a {
+      padding: 10px 40px;
+    }
+    .thanks .content .contenterror .textThank::before {
+      right: -85px;
+      top: -224px;
     }
     .thanks .content .textThank .btn {
       width: 234px;
@@ -2108,7 +2209,7 @@ button#btn3-2 div:nth-child(2) p {
     .home .part1 li {
       font-size: 65px;
     }
-    .home .part1 p {
+    .home .part1 p.parrafohome {
       font-size: 21px;
       width: 529px;
       margin-bottom: 39px;
@@ -2163,7 +2264,7 @@ button#btn3-2 div:nth-child(2) p {
     ul li.contact {
       margin-right: 0;
     }
-    .home .part1 p {
+    .home .part1 p.parrafohome {
       margin-top: 21px;
     }
     .home .part1 a {
@@ -2263,7 +2364,7 @@ button#btn3-2 div:nth-child(2) p {
       height: 574.72px;
     }
     &::before {
-      content: url(https://nerdvideo.club/img/ramaimagen.png);
+      content: url(../img/ramaimagen.png);
       width: 362.79px;
       height: 551.73px;
       position: absolute;
@@ -2294,7 +2395,7 @@ button#btn3-2 div:nth-child(2) p {
   .reels .autoplay {
     position: relative;
     &::before {
-      content: url(https://nerdvideo.club/img/ramasreels.png);
+      content: url(../img/ramasreels.png);
       position: absolute;
       top: -187px;
       left: 226px;
@@ -2320,7 +2421,7 @@ button#btn3-2 div:nth-child(2) p {
   .galeria .autoplay2 {
     position: relative;
     &::before {
-      content: url(https://nerdvideo.club/img/ramasgaleria.png);
+      content: url(../img/ramasgaleria.png);
       position: absolute;
       top: -329px;
       left: 267px;
@@ -2407,6 +2508,18 @@ button#btn3-2 div:nth-child(2) p {
   display: none;
 }
 @media (max-width: 910px) {
+  button#btn3-11 {
+    height: 60px;
+  }
+  button#btn3-11 div span p {
+    font-size: 25px;
+  }
+  button#btn3-11 div span {
+    padding: 9px 28px;
+  }
+  button#btn3-11:hover div {
+    transform: translateY(-69px);
+  }
   ul.main-menu {
     display: none;
   }
@@ -2436,7 +2549,7 @@ button#btn3-2 div:nth-child(2) p {
   .home .part1 li {
     font-size: 60px;
   }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 21px;
     width: 529px;
     margin-bottom: 39px;
@@ -2467,6 +2580,10 @@ button#btn3-2 div:nth-child(2) p {
   }
   .galeria .autoplay2::before {
     display: none;
+  }
+  .galeria .slick-slide {
+    margin: 0 50px;
+    padding: 0 0;
   }
 }
 
@@ -2499,7 +2616,7 @@ button#btn3-2 div:nth-child(2) p {
   .contents__container {
     width: 100%;
   }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     width: 375px;
     line-height: 25px;
   }
@@ -2543,8 +2660,15 @@ button#btn3-2 div:nth-child(2) p {
   .contents__container__list__item {
     padding: 11px 0;
   }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 570px) {
+  .thanks .content .contenterror .textThank::before {
+    right: -111px;
+    top: -224px;
   }
 }
 
@@ -2570,6 +2694,21 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 425px) {
+  button#btn3-11 {
+    height: 54px;
+    width: 100%;
+  }
+  button#btn3-11 div span p {
+    font-size: 31px;
+  }
+  button#btn3-11 div span {
+    padding: 6px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  button#btn3-11:hover div {
+    transform: translateY(-63px);
+  }
   .home .part1 li {
     font-size: 50px;
   }
@@ -2610,19 +2749,10 @@ button#btn3-2 div:nth-child(2) p {
   .reels .slick-prev {
     right: 60px;
   }
-  // .galeria .autoplay2::before {
-  //   display: none;
-  // }
-  // .reels .autoplay::before {
-  //   display: none;
-  // }
   .logo .title {
     font-size: 33px;
     line-height: 33px;
   }
-  // #navigation {
-  //   padding: 33px 0 !important;
-  // }
   .reels,
   .galeria {
     padding-top: 88px;
@@ -2641,7 +2771,7 @@ button#btn3-2 div:nth-child(2) p {
   .home .part2 {
     width: 100%;
   }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     width: 100%;
     line-height: 25px;
   }
@@ -2689,11 +2819,6 @@ button#btn3-2 div:nth-child(2) p {
     font-size: 40px;
     line-height: 40px;
   }
-  // .contactopage .center .title p {
-  //   display: block;
-  //   margin-top: 5px;
-  //   font-size: 21px;
-  // }
   .contactopage .content::before {
     width: 164px;
     transform: scale(0.5);
@@ -2724,15 +2849,15 @@ button#btn3-2 div:nth-child(2) p {
     height: 57px;
   }
 
-  .contactopage
-    .center
-    .contenido-formulario
-    form
-    fieldset
-    input[type="text"]:focus-visible {
-    outline: none !important;
-    border: none !important;
-  }
+  // .contactopage
+  //   .center
+  //   .contenido-formulario
+  //   form
+  //   fieldset
+  //   input[type="text"]:focus-visible {
+  //   outline: none !important;
+  //   border: none !important;
+  // }
 
   .contactopage .content::after {
     content: none;
@@ -2932,6 +3057,9 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 400px) {
+  button#btn3-11 div span p {
+    font-size: 25px;
+  }
   #navigation {
     padding: 43px 0 !important;
   }
@@ -2942,7 +3070,7 @@ button#btn3-2 div:nth-child(2) p {
   .home .part1 li {
     font-size: 50px;
   }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 18px;
   }
   .home .part1 a {
@@ -3133,7 +3261,7 @@ button#btn3-2 div:nth-child(2) p {
 
 // You can define a value and calculate the other if you want change speed or the number of lines
 .hidden {
-  display: none !important;
+  display: none;
 }
 .load {
   width: 100%;

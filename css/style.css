@@ -16,9 +16,13 @@
 body {
   cursor: url(../cursor/radio-on-button.png) 32 32, pointer; }
 
+button {
+  -webkit-appearance: none; }
+
 button#btn3-2:hover,
 button#btn1:hover,
 button#btn3-1:hover,
+button#btn3-11:hover,
 .contactopage .center .contenido-formulario #fs-frm [type="submit"]:hover {
   cursor: url(../cursor/grifo.png), pointer; }
 
@@ -192,7 +196,7 @@ a.cerrar {
       font-size: 84.67px;
       font-weight: 700;
       width: 799px; }
-    .home .part1 p {
+    .home .part1 p.parrafohome {
       margin-top: 5px;
       font-family: var(--fuente-montserrat);
       font-size: 30px;
@@ -258,7 +262,11 @@ a.cerrar {
   .home-bg video,
   .home-bg iframe {
     min-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%); }
 
 @keyframes zoomInOut {
   0%,
@@ -329,7 +337,7 @@ a.cerrar {
   position: relative; }
 
 .about .context .part2 h2::before {
-  content: url(https://nerdvideo.club/img/rosa.png);
+  content: url(../img/rosa.png);
   position: absolute;
   top: -85px;
   left: 226px; }
@@ -369,7 +377,7 @@ a.cerrar {
   position: relative; }
 
 .backRama::before {
-  content: url(https://nerdvideo.club/img/backabout.png);
+  content: url(../img/backabout.png);
   position: absolute;
   z-index: -2;
   top: -50px;
@@ -428,12 +436,12 @@ a.cerrar {
   content: none !important; }
 
 .reels .slick-next {
-  background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
+  background-image: url(../img/flecha2.svg) !important;
   background-size: 100% !important;
   background-repeat: no-repeat; }
 
 .reels .slick-prev {
-  background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
+  background-image: url(../img/flecha1.svg) !important;
   background-size: 100% !important;
   background-repeat: no-repeat; }
 
@@ -504,21 +512,33 @@ a.cerrar {
   content: none !important; }
 
 .galeria .slick-next {
-  background-image: url(https://nerdvideo.club/img/flecha2.svg) !important;
+  background-image: url(../img/flecha2.svg) !important;
   background-size: 100% !important;
   background-repeat: no-repeat !important; }
 
 .galeria .slick-prev {
-  background-image: url(https://nerdvideo.club/img/flecha1.svg) !important;
+  background-image: url(../img/flecha1.svg) !important;
   background-size: 100% !important;
   background-repeat: no-repeat !important; }
 
 /*Page thanks*/
+.thanks .containererror {
+  height: calc(100% - 100px); }
+
 .thanks .content {
   position: relative; }
   .thanks .content .contenidoThnaks {
     justify-content: center;
     position: relative; }
+  .thanks .content .contenterror {
+    transform: translateY(0) !important; }
+    .thanks .content .contenterror .textThank::before {
+      content: url(../img/rama3.png);
+      position: absolute;
+      right: -18px;
+      top: -234px;
+      opacity: 0.8;
+      z-index: -2; }
   .thanks .content .textThank .btn {
     text-align: center;
     margin-top: 35px;
@@ -539,6 +559,9 @@ a.cerrar {
         color: #fff; }
     .thanks .content .textThank .btn a.instagram {
       padding: 15px 30px; }
+  .thanks .content .textThank .btnerror {
+    width: auto;
+    justify-content: center; }
   .thanks .content .textThank .titleThanks {
     display: flex;
     text-align: center;
@@ -554,7 +577,7 @@ a.cerrar {
     font-size: 25px;
     margin-top: 15px; }
   .thanks .content .textThank::before {
-    content: url(https://nerdvideo.club/img/rama3.png);
+    content: url(../img/rama3.png);
     position: absolute;
     right: 74px;
     top: -174px;
@@ -584,7 +607,7 @@ a.cerrar {
   overflow: hidden;
   z-index: 80; }
   .menumovil .content::before {
-    content: url(https://nerdvideo.club/img/rama1.png);
+    content: url(../img/rama1.png);
     width: 164px;
     transform: scale(0.5);
     position: absolute;
@@ -592,7 +615,7 @@ a.cerrar {
     top: -122px;
     opacity: 0.8; }
   .menumovil .content::after {
-    content: url(https://nerdvideo.club/img/rama2.png);
+    content: url(../img/rama2.png);
     position: absolute;
     transform: scale(0.5);
     right: -95px;
@@ -636,13 +659,13 @@ a.cerrar {
   .contactopage .content {
     position: relative; }
   .contactopage .content::before {
-    content: url(https://nerdvideo.club/img/rama1.png);
+    content: url(../img/rama1.png);
     position: absolute;
     left: -146px;
     top: -79px;
     opacity: 0.8; }
   .contactopage .content::after {
-    content: url(https://nerdvideo.club/img/rama2.png);
+    content: url(../img/rama2.png);
     position: absolute;
     right: -146px;
     bottom: -40px;
@@ -1018,6 +1041,58 @@ span:nth-child(2) {
   transition: none;
   transition-delay: none; }
 
+/*btn3-11*/
+/* From cssbuttons.io by @Sergestra */
+button#btn3-11 {
+  outline: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  border-radius: 16.93px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-color: transparent;
+  border: 1px solid #fff; }
+  button#btn3-11:hover {
+    border: 1px solid #000; }
+
+button#btn3-11 div {
+  transform: translateY(0px);
+  width: 100%; }
+
+button#btn3-11,
+button#btn3-11 div {
+  transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+
+button#btn3-11 div span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0.75em 1.125em;
+  font-family: var(--fuente-texto);
+  font-size: 42.33px;
+  font-weight: 300;
+  line-height: 42.33px;
+  padding: 15px 45px; }
+
+button#btn3-11 div span p {
+  font-size: 42.33px;
+  font-weight: 300; }
+
+button#btn3-11 div:nth-child(2) {
+  background-color: black; }
+
+button#btn3-11:hover div {
+  transform: translateY(-82px); }
+
+button#btn3-11 div:nth-child(1) p {
+  color: white; }
+
+button#btn3-11 div:nth-child(2) p {
+  color: white; }
+
 /*btn3-1*/
 /* From cssbuttons.io by @Sergestra */
 button#btn3-1 {
@@ -1069,7 +1144,7 @@ button#btn3-1 div:nth-child(1) p {
 button#btn3-1 div:nth-child(2) p {
   color: white; }
 
-/*btn3-1*/
+/*btn3-2*/
 /* From cssbuttons.io by @Sergestra */
 button#btn3-2 {
   outline: 0;
@@ -1168,7 +1243,7 @@ button#btn3-2 div:nth-child(2) p {
   -webkit-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   .card .cardBg {
-    background-image: url("http://nerdvideo.club/img/about.png");
+    background-image: url(../img/about.png);
     width: 100%;
     height: 100%; }
 
@@ -1266,6 +1341,14 @@ button#btn3-2 div:nth-child(2) p {
         padding: 30px 0; }
 
 @media (max-width: 1440px) {
+  button#btn3-11 {
+    height: 64px; }
+  button#btn3-11 div span {
+    padding: 12px 34px; }
+  button#btn3-11 div span p {
+    font-size: 35px; }
+  button#btn3-11:hover div {
+    transform: translateY(-75px); }
   .logo .title {
     font-size: 46px;
     line-height: 40px; }
@@ -1278,7 +1361,7 @@ button#btn3-2 div:nth-child(2) p {
     width: 751px; }
   .home .part1 li {
     font-size: 79.5px; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 26px;
     margin-bottom: 53px; }
   .home .part1 a {
@@ -1351,6 +1434,12 @@ input[type="submit"] {
     height: 574px; } }
 
 @media (max-width: 1280px) {
+  button#btn3-11 div span p {
+    font-size: 32px; }
+  button#btn3-11 div span {
+    padding: 10px 34px; }
+  button#btn3-11:hover div {
+    transform: translateY(-71px); }
   .galeria .slick-next,
   .galeria .slick-prev {
     top: -104px; }
@@ -1363,7 +1452,7 @@ input[type="submit"] {
     width: 700px; }
   .home .part1 li {
     font-size: 75.3px; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 23px;
     width: 700px; }
   .home .part1 a {
@@ -1504,12 +1593,22 @@ input[type="submit"] {
   .thanks .content .textThank .btn {
     width: 100%;
     flex-direction: column; }
+  .thanks .content .textThank .btn.btnerror {
+    width: auto;
+    flex-direction: unset; }
   .thanks .content .textThank .titleThanks {
     text-align: unset; }
+  .thanks .content .textThank .error {
+    text-align: center; }
   .thanks .content .textThank h1 {
     font-size: 40px; }
   .thanks .content .textThank p {
     font-size: 24px; }
+  .thanks .content .textThank .btn.btnerror a {
+    padding: 10px 40px; }
+  .thanks .content .contenterror .textThank::before {
+    right: -85px;
+    top: -224px; }
   .thanks .content .textThank .btn {
     width: 234px;
     margin-top: 36px; }
@@ -1617,7 +1716,7 @@ input[type="submit"] {
     width: 614px; }
   .home .part1 li {
     font-size: 65px; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 21px;
     width: 529px;
     margin-bottom: 39px;
@@ -1655,7 +1754,7 @@ input[type="submit"] {
     display: none; }
   ul li.contact {
     margin-right: 0; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     margin-top: 21px; }
   .home .part1 a {
     padding: 12px 53px; }
@@ -1728,7 +1827,7 @@ input[type="submit"] {
       width: 516px;
       height: 574.72px; }
     .imgTablet::before {
-      content: url(https://nerdvideo.club/img/ramaimagen.png);
+      content: url(../img/ramaimagen.png);
       width: 362.79px;
       height: 551.73px;
       position: absolute;
@@ -1754,7 +1853,7 @@ input[type="submit"] {
   .reels .autoplay {
     position: relative; }
     .reels .autoplay::before {
-      content: url(https://nerdvideo.club/img/ramasreels.png);
+      content: url(../img/ramasreels.png);
       position: absolute;
       top: -187px;
       left: 226px;
@@ -1777,7 +1876,7 @@ input[type="submit"] {
   .galeria .autoplay2 {
     position: relative; }
     .galeria .autoplay2::before {
-      content: url(https://nerdvideo.club/img/ramasgaleria.png);
+      content: url(../img/ramasgaleria.png);
       position: absolute;
       top: -329px;
       left: 267px;
@@ -1840,6 +1939,14 @@ input[type="submit"] {
   display: none; }
 
 @media (max-width: 910px) {
+  button#btn3-11 {
+    height: 60px; }
+  button#btn3-11 div span p {
+    font-size: 25px; }
+  button#btn3-11 div span {
+    padding: 9px 28px; }
+  button#btn3-11:hover div {
+    transform: translateY(-69px); }
   ul.main-menu {
     display: none; }
   .menuMovil {
@@ -1861,7 +1968,7 @@ input[type="submit"] {
     width: 567px; }
   .home .part1 li {
     font-size: 60px; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 21px;
     width: 529px;
     margin-bottom: 39px;
@@ -1880,7 +1987,10 @@ input[type="submit"] {
     left: 426px;
     transform: scale(1) rotate(10.84deg); }
   .galeria .autoplay2::before {
-    display: none; } }
+    display: none; }
+  .galeria .slick-slide {
+    margin: 0 50px;
+    padding: 0 0; } }
 
 @media (max-width: 610px) and (min-width: 426px) {
   .home .context {
@@ -1900,7 +2010,7 @@ input[type="submit"] {
     width: 100%; }
   .contents__container {
     width: 100%; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     width: 375px;
     line-height: 25px; }
   .home .part1 a {
@@ -1931,8 +2041,13 @@ input[type="submit"] {
     height: 127px; }
   .contents__container__list__item {
     padding: 11px 0; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     margin-top: 15px; } }
+
+@media (max-width: 570px) {
+  .thanks .content .contenterror .textThank::before {
+    right: -111px;
+    top: -224px; } }
 
 @media (max-width: 550px) and (min-width: 426px) {
   .reels .context .btn a {
@@ -1949,6 +2064,17 @@ input[type="submit"] {
     padding: 11px 24px; } }
 
 @media (max-width: 425px) {
+  button#btn3-11 {
+    height: 54px;
+    width: 100%; }
+  button#btn3-11 div span p {
+    font-size: 31px; }
+  button#btn3-11 div span {
+    padding: 6px 0px;
+    display: flex;
+    justify-content: center; }
+  button#btn3-11:hover div {
+    transform: translateY(-63px); }
   .home .part1 li {
     font-size: 50px; }
   .contactopage .center .contenido-formulario {
@@ -1989,7 +2115,7 @@ input[type="submit"] {
   .home .part1,
   .home .part2 {
     width: 100%; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     width: 100%;
     line-height: 25px; }
   .home .part1 a {
@@ -2048,14 +2174,6 @@ input[type="submit"] {
     font-size: 31px;
     width: 220px;
     height: 57px; }
-  .contactopage
-.center
-.contenido-formulario
-form
-fieldset
-input[type="text"]:focus-visible {
-    outline: none !important;
-    border: none !important; }
   .contactopage .content::after {
     content: none; }
   .parrafoMovil {
@@ -2194,6 +2312,8 @@ input[type="text"]:focus-visible {
     font-weight: 400; } }
 
 @media (max-width: 400px) {
+  button#btn3-11 div span p {
+    font-size: 25px; }
   #navigation {
     padding: 43px 0 !important; }
   .home .part1 h1 {
@@ -2201,7 +2321,7 @@ input[type="text"]:focus-visible {
     line-height: 39px; }
   .home .part1 li {
     font-size: 50px; }
-  .home .part1 p {
+  .home .part1 p.parrafohome {
     font-size: 18px; }
   .home .part1 a {
     font-size: 25px; }
@@ -2327,7 +2447,7 @@ input[type="text"]:focus-visible {
     transform: translate3d(0, -25%, 0); } }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 .load {
   width: 100%;
