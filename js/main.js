@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
     document.querySelector(".main").classList.remove("hidden");
     document.querySelector(".home").classList.add("active");
-    /*  */
     document.querySelector(".load").classList.add("fade-out");
     setTimeout(() => {
         document.querySelector(".load").style.display = "none";
@@ -200,7 +199,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1441,
