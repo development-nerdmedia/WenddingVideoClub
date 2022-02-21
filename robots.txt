@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /thanks.php/
+Disallow: /php/thanks.php/
+Disallow: /thanks.html/
+Disallow: /package.json/
+Disallow: /package-lock.json/

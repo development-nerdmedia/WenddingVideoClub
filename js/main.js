@@ -1,11 +1,11 @@
-window.addEventListener("load", () => {
-    document.querySelector(".main").classList.remove("hidden");
-    document.querySelector(".home").classList.add("active");
-    document.querySelector(".load").classList.add("fade-out");
-    setTimeout(() => {
-        document.querySelector(".load").style.display = "none";
-    }, 600);
-});
+// window.addEventListener("load", () => {
+//     document.querySelector(".main").classList.remove("hidden");
+//     document.querySelector(".home").classList.add("active");
+//     document.querySelector(".load").classList.add("fade-out");
+//     setTimeout(() => {
+//         document.querySelector(".load").style.display = "none";
+//     }, 600);
+// });
 
 
 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
@@ -71,7 +71,7 @@ window.addEventListener('scroll', () => {
         header.classList.add('headerScrol');
         titlenav.style.color = "#000";
         titlenav.style.display = "none";
-        titlenavback.style.color = "#000";
+        titlenavback.style.color = "#3E636B";
         titlenavback.style.display = "block";
         nav.style.padding = "25px 0";
         nav.style.alignItems = "center";
@@ -79,16 +79,16 @@ window.addEventListener('scroll', () => {
         menumovilblanco.style.display = "none"
         menumoviloscuro.style.display = "block"
         btnmusicnegro.style.display = "block";
-        interruptorid.style.color = "#000";
+        interruptorid.style.color = "#3e636b";
         jQuery('li.itemNavigation').removeClass('hvr-underline-from-left');
         jQuery('li.itemNavigation').addClass('hvr-underline-from-left-black');
 
         for (var i = 0, len = lista.length; i < len; i++) {
-            lista[i].style.color = "#000";
+            lista[i].style.color = "#3E636B";
 
         }
         for (var ii = 0, lenn = line.length; ii < lenn; ii++) {
-            line[ii].style.color = "#000";
+            line[ii].style.color = "#3E636B";
         }
 
     } else {
@@ -111,7 +111,7 @@ window.addEventListener('scroll', () => {
         if (mediaqueryList.matches) {
             nav.style.padding = "35px 0";
         } else {
-            nav.style.padding = "70px 0";
+            nav.style.padding = "50px 0";
         }
 
         for (var i = 0, len = lista.length; i < len; i++) {

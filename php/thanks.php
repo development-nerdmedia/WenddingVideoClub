@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../img/favicon-wedding.svg"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Wendding Video Club</title>
   </head>
   <body>
   <?php 
-$myemail = 'development@nerdmedia.pe';
+$myemails = 'development@nerdmedia.pe, alonso@nerdmedia.pe';
 $name = $_POST['name'];
 $tel = $_POST['telephone'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-$to = $myemail;
+$to = $myemails;
 $email_subject = "Contacto Wedding Video Club";
 $email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n 
 Telefono: $tel \n Email: $email \n Mensaje: \n $message";

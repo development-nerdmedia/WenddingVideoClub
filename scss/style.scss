@@ -51,14 +51,21 @@ ul li.icon .muted span:hover {
 section.about {
   cursor: url(../cursor/brujula52.png), pointer;
 }
+section.about .cardWrap {
+  cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
+}
 section.reels {
   cursor: url(../cursor/film.png), pointer;
-  .reels .autoplay .slick-slide:hover {
-    cursor: url(../cursor/film.png), pointer;
-  }
+}
+
+section.reels .autoplay .slick-slide:hover {
+  cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
 section.galeria {
   cursor: url(../cursor/camara.png), pointer;
+}
+section.galeria .slick-slide {
+  cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
 footer {
   cursor: default;
@@ -125,7 +132,7 @@ a img#black {
 #navigation {
   display: flex;
   justify-content: space-between;
-  padding: 70px 0;
+  padding: 50px 0;
 }
 
 .logo {
@@ -139,6 +146,10 @@ a img#black {
     line-height: 50px;
     font-style: italic;
     color: #fff;
+    span {
+      position: relative;
+      left: -6px;
+    }
   }
   #title2 {
     display: none;
@@ -365,6 +376,7 @@ a.cerrar {
     }
     .part2 {
       width: 50%;
+      color: #3e636b;
       h2 {
         font-family: var(--fuente-texto);
         font-size: 76.73px;
@@ -432,6 +444,7 @@ a.cerrar {
       font-size: 58.55px;
       line-height: 63px;
       margin-bottom: 60px;
+      color: #3e636b;
     }
     .btn {
       margin-top: 80px;
@@ -668,10 +681,10 @@ a.cerrar {
         justify-content: space-around;
         width: 690px;
         a {
-          border: 1px solid #000;
+          border: 1px solid #3e636b;
           font-family: var(--fuente-texto);
           font-size: 42px;
-          color: #000;
+          color: #3e636b;
           font-weight: 300;
           text-decoration: none;
           padding: 15px 50px;
@@ -700,11 +713,13 @@ a.cerrar {
         font-size: 84px;
         font-style: italic;
         justify-content: center;
+        color: #3e636b;
       }
       p {
         font-family: var(--fuente-titulo);
         font-size: 25px;
         margin-top: 15px;
+        color: #3e636b;
       }
     }
     .textThank::before {
@@ -785,7 +800,7 @@ a.cerrar {
         padding: 25px 0;
         a {
           text-decoration: none;
-          color: #000;
+          color: #3e636b;
           font-size: 40px;
           font-family: var(--fuente-texto);
           padding: 0 5px;
@@ -850,10 +865,12 @@ a.cerrar {
         font-size: 84px;
         width: 650px;
         font-style: italic;
+        color: #3e636b;
       }
       p {
         font-family: var(--fuente-montserrat);
         font-size: 26px;
+        color: #3e636b;
       }
     }
     .contenido-formulario {
@@ -865,6 +882,7 @@ a.cerrar {
         font-family: var(--fuente-montserrat);
         font-size: 35px;
         font-weight: 400;
+        color: #3e636b;
       }
       #fs-frm input:focus,
       #fs-frm select:focus,
@@ -877,7 +895,7 @@ a.cerrar {
 
       #fs-frm input:focus,
       #fs-frm textarea:focus {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #3e636b;
       }
       #fs-frm [type="button"],
       #fs-frm [type="submit"],
@@ -897,7 +915,7 @@ a.cerrar {
         -moz-appearance: button;
         appearance: button;
         transition: all 0.2s linear;
-        background-color: #000;
+        background-color: #3e636b;
       }
       form {
         margin-top: 20px;
@@ -921,9 +939,10 @@ a.cerrar {
             margin-bottom: 20px;
             height: 50px;
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #3e636b;
             font-size: 18px;
             width: 100%;
+            color: #3e636b;
           }
           input[type="email"] {
             margin-bottom: 35px;
@@ -931,17 +950,18 @@ a.cerrar {
           textarea {
             font-family: var(--fuente-titulo);
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #3e636b;
             margin-bottom: 60px;
             font-size: 18px;
             height: 130px;
             width: 100%;
+            color: #3e636b;
           }
           input[type="submit"] {
             width: 270px;
             background-color: #fff;
-            border: 1px solid #000;
-            color: #000;
+            border: 1px solid #3e636b;
+            color: #3e636b;
             font-family: var(--fuente-texto);
             font-size: 43px;
             font-weight: 300;
@@ -977,6 +997,7 @@ footer {
       font-family: var(--fuente-texto);
       font-size: 42px;
       font-weight: 300;
+      color: #3e636b;
     }
   }
   .creditos {
@@ -988,6 +1009,7 @@ footer {
       font-size: 19px;
       font-weight: 500;
       line-height: 14px;
+      color: #3e636b;
     }
     span {
       padding: 2.5px 0 0 8px;
@@ -1047,7 +1069,7 @@ footer {
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #000;
+  background: #3e636b;
   height: 4px;
   -webkit-transition-property: right;
   transition-property: right;
@@ -1083,7 +1105,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #121212;
+  background: #3e636b;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -1274,7 +1296,7 @@ button#btn3-11 {
   background-color: transparent;
   border: 1px solid #fff;
   &:hover {
-    border: 1px solid #000;
+    border: 1px solid #3e636b;
   }
 }
 
@@ -1312,7 +1334,7 @@ button#btn3-11 div span p {
 // }
 
 button#btn3-11 div:nth-child(2) {
-  background-color: black;
+  background-color: #3e636b;
 }
 
 button#btn3-11:hover div {
@@ -1339,7 +1361,7 @@ button#btn3-1 {
   height: 72px;
   border-radius: 16.93px;
   overflow: hidden;
-  border: 1px solid #000;
+  border: 1px solid #3e636b;
 }
 
 button#btn3-1 div {
@@ -1376,7 +1398,7 @@ button#btn3-1 div:nth-child(1) {
 }
 
 button#btn3-1 div:nth-child(2) {
-  background-color: black;
+  background-color: #3e636b;
 }
 
 // button#btn3-1:hover {
@@ -1390,7 +1412,7 @@ button#btn3-1:hover div {
 button#btn3-1 div:nth-child(1) p {
   // font-size: 17px;
   // font-weight: bold;
-  color: black;
+  color: #3e636b;
 }
 
 button#btn3-1 div:nth-child(2) p {
@@ -1409,7 +1431,7 @@ button#btn3-2 {
   height: 72px;
   border-radius: 16.93px;
   overflow: hidden;
-  border: 1px solid #000;
+  border: 1px solid #3e636b;
 }
 
 button#btn3-2 div {
@@ -1446,7 +1468,7 @@ button#btn3-2 div:nth-child(1) {
 }
 
 button#btn3-2 div:nth-child(2) {
-  background-color: black;
+  background-color: #3e636b;
 }
 
 // button#btn3-1:hover {
@@ -1460,7 +1482,7 @@ button#btn3-2:hover div {
 button#btn3-2 div:nth-child(1) p {
   // font-size: 17px;
   // font-weight: bold;
-  color: black;
+  color: #3e636b;
 }
 
 button#btn3-2 div:nth-child(2) p {
@@ -1690,6 +1712,9 @@ button#btn3-2 div:nth-child(2) p {
   .logo .title {
     font-size: 46px;
     line-height: 40px;
+    img {
+      width: 30px;
+    }
   }
   ul li {
     font-size: 28px;
@@ -1827,6 +1852,12 @@ button#btn3-2 div:nth-child(2) p {
   .logo .title {
     font-size: 44px;
     line-height: 40px;
+    img {
+      width: 28px;
+    }
+  }
+  .logo .title span {
+    top: 1px;
   }
   .home .part1 h1 {
     font-size: 75.3px;
@@ -2540,6 +2571,9 @@ button#btn3-2 div:nth-child(2) p {
   .logo .title {
     font-size: 40px;
     line-height: 38px;
+    img {
+      width: 24px;
+    }
   }
   .home .part1 h1 {
     font-size: 60px;
@@ -2752,6 +2786,9 @@ button#btn3-2 div:nth-child(2) p {
   .logo .title {
     font-size: 33px;
     line-height: 33px;
+    img {
+      width: 20px;
+    }
   }
   .reels,
   .galeria {
@@ -2870,6 +2907,7 @@ button#btn3-2 div:nth-child(2) p {
       font-family: var(--fuente-montserrat);
       font-size: 26px;
       font-weight: 400;
+      color: #3e636b;
     }
   }
   .contactopage .center .contenido-formulario form fieldset textarea {
@@ -3060,9 +3098,9 @@ button#btn3-2 div:nth-child(2) p {
   button#btn3-11 div span p {
     font-size: 25px;
   }
-  #navigation {
-    padding: 43px 0 !important;
-  }
+  // #navigation {
+  //   padding: 43px 0 !important;
+  // }
   .home .part1 h1 {
     font-size: 50px;
     line-height: 39px;
