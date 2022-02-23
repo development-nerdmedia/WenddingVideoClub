@@ -17,9 +17,9 @@
 
 /* change cursor */
 
-body {
-  cursor: url(../cursor/radio-on-button.png) 32 32, pointer;
-}
+// body {
+//   cursor: url(../cursor/radio-on-button.png) 32 32, pointer;
+// }
 
 button {
   -webkit-appearance: none;
@@ -33,57 +33,70 @@ button#btn3-11:hover,
   cursor: url(../cursor/grifo.png), pointer;
 }
 
-.contactopage .center .contenido-formulario form fieldset input,
-.contactopage .center .contenido-formulario form fieldset textarea,
-.contactopage .center .contenido-formulario form fieldset {
-  cursor: url(../cursor/grifoblack.png), pointer;
-}
+// .contactopage .center .contenido-formulario form fieldset input,
+// .contactopage .center .contenido-formulario form fieldset textarea,
+// .contactopage .center .contenido-formulario form fieldset {
+//   cursor: url(../cursor/grifoblack.png), pointer;
+// }
 
-section.contactopage {
-  cursor: url(../cursor/correo.png), pointer;
-}
+// section.contactopage {
+//   cursor: url(../cursor/correo.png), pointer;
+// }
 
 .nav-item:hover,
 ul li.icon .muted span:hover {
   cursor: url(../cursor/grifo.png), pointer;
 }
 
-section.about {
-  cursor: url(../cursor/brujula52.png), pointer;
-}
+// section.about {
+//   cursor: url(../cursor/brujula52.png), pointer;
+// }
 section.about .cardWrap {
   cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
-section.reels {
-  cursor: url(../cursor/film.png), pointer;
+
+footer .contenidoFooter .order2 {
+  cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
+// section.reels {
+//   cursor: url(../cursor/film.png), pointer;
+// }
 
 section.reels .autoplay .slick-slide:hover {
   cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
-section.galeria {
-  cursor: url(../cursor/camara.png), pointer;
-}
+// section.galeria {
+//   cursor: url(../cursor/camara.png), pointer;
+// }
 section.galeria .slick-slide {
   cursor: url(../img/cursor-contacto-128.png) 64 64, auto;
 }
-footer {
-  cursor: default;
-}
-footer h3.order1 {
-  cursor: url(../cursor/ubicacion.png), pointer;
-}
-footer h3.order2 {
-  cursor: url(../cursor/correo-electronico.png), pointer;
-}
-footer h3.order3 {
-  cursor: url(../cursor/telephone.png), pointer;
-}
+// footer {
+//   cursor: default;
+// }
+// footer h3.order1 {
+//   cursor: url(../cursor/ubicacion.png), pointer;
+// }
+// footer h3.order2 {
+//   cursor: url(../cursor/correo-electronico.png), pointer;
+// }
+// footer h3.order3 {
+//   cursor: url(../cursor/telephone.png), pointer;
+// }
 
 main {
   overflow: hidden;
 }
 
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  img {
+    width: 100px;
+  }
+}
 .player .vp-sidedock {
   display: none !important;
 }
@@ -152,6 +165,10 @@ a img#black {
     }
   }
   #title2 {
+    display: none;
+  }
+  img.img-nav {
+    width: 162px;
     display: none;
   }
 }
@@ -999,6 +1016,13 @@ footer {
       font-weight: 300;
       color: #3e636b;
     }
+    a {
+      text-decoration: none;
+      font-family: var(--fuente-texto);
+      font-size: 42px;
+      font-weight: 300;
+      color: #3e636b;
+    }
   }
   .creditos {
     display: flex;
@@ -1720,6 +1744,9 @@ button#btn3-2 div:nth-child(2) p {
     font-size: 28px;
     margin: 0 14px;
   }
+  .logo img.img-nav {
+    width: 150px;
+  }
   .home .part1 h1 {
     font-size: 79.5px;
     line-height: 77px;
@@ -2222,11 +2249,17 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 1024px) {
+  .btn-whatsapp img {
+    width: 80px;
+  }
   .containerback {
     position: relative;
   }
   .galeria .slick-slide {
     margin: 0 5px;
+  }
+  .logo img.img-nav {
+    width: 135px;
   }
   @media (max-height: 900px) {
     #navigation {
@@ -2475,6 +2508,9 @@ button#btn3-2 div:nth-child(2) p {
     width: 100%;
     line-height: 60px;
   }
+  .logo img.img-nav {
+    width: 130px;
+  }
   .about .context .part2 h3 {
     font-size: 30px;
   }
@@ -2526,7 +2562,8 @@ button#btn3-2 div:nth-child(2) p {
   footer .contenidoFooter .order1 {
     padding-bottom: 0;
   }
-  footer .contenidoFooter h3 {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
     padding: 10px 0;
   }
 }
@@ -2557,7 +2594,8 @@ button#btn3-2 div:nth-child(2) p {
   .menuMovil {
     display: block;
   }
-  footer .contenidoFooter h3 {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
     font-size: 35px;
   }
   .home .part1 a {
@@ -2728,6 +2766,9 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 425px) {
+  .logo img.img-nav {
+    width: 110px;
+  }
   button#btn3-11 {
     height: 54px;
     width: 100%;
@@ -3046,7 +3087,8 @@ button#btn3-2 div:nth-child(2) p {
   .galeria .slick-slide {
     margin: 0 12.5px;
   }
-  footer .contenidoFooter h3 {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
     font-size: 30px;
     padding: 10px 0;
   }

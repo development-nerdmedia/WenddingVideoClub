@@ -14,7 +14,7 @@
   </head>
   <body>
   <?php 
-$myemails = 'development@nerdmedia.pe, alonso@nerdmedia.pe';
+$myemails = 'development@nerdmedia.pe, alonso@nerdmedia.pe, fran@weddingvideo.pro';
 $name = $_POST['name'];
 $tel = $_POST['telephone'];
 $email = $_POST['email'];
