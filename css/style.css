@@ -1330,7 +1330,7 @@ button#btn3-2 div:nth-child(2) p {
     font-weight: 600;
     overflow: hidden;
     height: 94px;
-    width: 870px; }
+    width: max-content; }
     .contents__container__text {
       display: inline;
       float: left;
@@ -2037,7 +2037,13 @@ input[type="submit"] {
   .home .part2 {
     width: 100%; }
   .contents__container {
-    width: 100%; }
+    width: 100%; } }
+
+@media (max-width: 610px) and (min-width: 426px) and (min-width: 479px) {
+  .contents__container {
+    width: 550px; } }
+
+@media (max-width: 610px) and (min-width: 426px) {
   .home .part1 p.parrafohome {
     width: 375px;
     line-height: 25px; }

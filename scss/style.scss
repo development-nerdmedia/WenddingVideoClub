@@ -1691,7 +1691,7 @@ button#btn3-2 div:nth-child(2) p {
     font-weight: 600;
     overflow: hidden;
     height: 94px;
-    width: 870px;
+    width: max-content;
 
     &__text {
       display: inline;
@@ -2687,6 +2687,12 @@ button#btn3-2 div:nth-child(2) p {
   }
   .contents__container {
     width: 100%;
+  }
+
+  @media (min-width: 479px) {
+    .contents__container {
+      width: 550px;
+    }
   }
   .home .part1 p.parrafohome {
     width: 375px;
