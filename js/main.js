@@ -30,6 +30,7 @@ var menumoviloscuro = document.getElementById('black1');
 var inputname = document.getElementById('full-name');
 var muteaudio = document.getElementById('mute');
 var interruptorid = document.getElementById('interruptor');
+var itemreels = document.getElementsByClassName('item-reels');
 
 jQuery(document).ready(function (argument) {
     MyApp.audio.init();
@@ -64,6 +65,7 @@ MyApp = {
 }
 
 var mediaqueryList = window.matchMedia("(max-width: 425px)");
+var mediaqueryList2 = window.matchMedia("(max-width: 1025px)");
 
 window.addEventListener('scroll', () => {
     var scroll = window.scrollY
@@ -126,19 +128,28 @@ window.addEventListener('scroll', () => {
     }
 })
 
+if (mediaqueryList2.matches) {
+    jQuery('.item-reels').removeClass('contacto');
+    jQuery('.item-galeria').removeClass('contacto');
+}
+
+/* elementos de contacto en pantalla */
+const nombre = document.querySelector("#full-name");
+const telephone = document.querySelector("#telephone");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+
+var validar = false;
+var valornombre = 1;
+var valortelefono = 1;
+var valoremail = 1;
+var valormensaje = 0;
+
+var result = valornombre * valortelefono * valoremail * valormensaje;
+console.log(result);
+
+
 document.addEventListener("click", function (e) {
-    // if (e.target.closest(".muted")) {
-    //     if (vol == true) {
-    //         reproductor.volume = 0.02;
-    //         vol = false;
-    //         document.getElementById("musica").removeAttribute("muted");
-    //         document.getElementById("interruptor").innerHTML = "off";
-    //     } else {
-    //         reproductor.volume = 0;
-    //         vol = true;
-    //         document.getElementById("interruptor").innerHTML = "on";
-    //     }
-    // }
     if (e.target.closest(".contacto")) {
         document.querySelector(".contactopage").classList.toggle("open");
         jQuery('body').addClass('scrollhidden');
@@ -160,7 +171,57 @@ document.addEventListener("click", function (e) {
         jQuery("#full-name").removeClass('focus-visible');
         inputname.removeAttribute('data-focus-visible-added');
     }
+
+    if (e.target.type == "submit") {
+        if (result === 0) {
+            e.preventDefault();
+            console.log("validando...")
+            if (nombre.value.length === 0 || nombre.value.charAt(0).includes(" ")) {
+                valornombre = 0;
+                if ($("#full-name.focus-visible")) {
+                    nombre.classList.add("falto");
+                }
+            } else {
+                valornombre = 1;
+            }
+            if (telephone.value.length === 0 || telephone.value.charAt(0).includes(" ")) {
+                valortelefono = 0;
+                if ($("#telephone.focus-visible")) {
+                    telephone.classList.add("falto");
+                }
+            } else {
+                valortelefono = 1;
+            }
+            if (email.value.length === 0 || email.value.charAt(0).includes(" ")) {
+                valoremail = 0;
+                if ($("#email.focus-visible")) {
+                    email.classList.add("falto");
+                }
+            } else {
+                valoremail = 1;
+            }
+            if (message.value.length === 0 || message.value.charAt(0).includes(" ")) {
+                valormensaje = 0;
+                if ($("#message.focus-visible")) {
+                    message.classList.add("falto");
+                }
+            } else {
+                valormensaje = 1;
+            }
+            console.log("validado")
+            result = valornombre * valortelefono * valoremail * valormensaje;
+            console.log(result);
+            if (result === 1) {
+                console.log(result)
+                onSubmit();
+            }
+        }
+    }
 })
+
+function onSubmit(token) {
+    document.getElementById("fs-frm").submit();
+}
 
 $(document).ready(function () {
     $('.autoplay').slick({

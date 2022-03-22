@@ -88,6 +88,11 @@ main {
   overflow: hidden;
 }
 
+.cambio {
+  display: inline;
+  float: left;
+}
+
 .btn-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -826,6 +831,52 @@ a.cerrar {
     }
   }
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+  .form-label {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    color: #3e636b;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    cursor: text;
+    transition: 0.1s linear;
+    z-index: -1;
+  }
+  .form-input:focus ~ label,
+  .form-input:valid ~ label {
+    font-size: 14px;
+    left: 0px;
+    top: -3px;
+    // opacity: 0.8;
+  }
+  .form-input.textarea:focus ~ label,
+  .form-input.textarea:valid ~ label {
+    font-size: 14px;
+    left: 0px;
+    top: -11px;
+    // opacity: 0.8;
+  }
+}
+
+.form-group.textarea {
+  .form-label {
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    color: #3e636b;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    cursor: text;
+    transition: 0.1s linear;
+  }
+}
 
 .contactopage {
   height: 100vh;
@@ -854,6 +905,7 @@ a.cerrar {
     right: -146px;
     bottom: -40px;
     opacity: 0.8;
+    z-index: -1;
   }
   .close {
     display: flex;
@@ -934,6 +986,15 @@ a.cerrar {
         transition: all 0.2s linear;
         background-color: #3e636b;
       }
+      #fs-frm [type="text"].falto,
+      #fs-frm [type="number"].falto,
+      #fs-frm [type="email"].falto,
+      #fs-frm textarea.falto {
+        border-bottom: 1px solid #e11f4b !important;
+        ~ label {
+          color: #e11f4b;
+        }
+      }
       form {
         margin-top: 20px;
         fieldset {
@@ -960,6 +1021,10 @@ a.cerrar {
             font-size: 18px;
             width: 100%;
             color: #3e636b;
+            box-sizing: border-box;
+            background-color: transparent;
+            padding: 0 15px;
+            padding-top: 8px;
           }
           input[type="email"] {
             margin-bottom: 35px;
@@ -973,6 +1038,10 @@ a.cerrar {
             height: 130px;
             width: 100%;
             color: #3e636b;
+            box-sizing: border-box;
+            background-color: transparent;
+            padding: 0 15px;
+            padding-top: 8px;
           }
           input[type="submit"] {
             width: 270px;
@@ -1027,7 +1096,7 @@ footer {
   .creditos {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     h3 {
       font-family: var(--fuente-titulo);
       font-size: 19px;
@@ -1674,12 +1743,24 @@ button#btn3-2 div:nth-child(2) p {
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
+.contenedor-change {
+  position: relative;
+  width: max-content;
+  display: flex;
+  padding-top: 5px;
+  h1 {
+    width: max-content !important;
+  }
+
+  // background-color: #16a085;
+}
+
 .contents {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 172px;
+  height: 160px;
   overflow: hidden;
 
   font-family: "Lato", sans-serif;
@@ -1688,10 +1769,30 @@ button#btn3-2 div:nth-child(2) p {
   color: #ecf0f1;
 
   &__container {
+    position: relative;
     font-weight: 600;
     overflow: hidden;
-    height: 94px;
+    height: 93px;
     width: max-content;
+    top: -8px;
+    // padding-left: 25px;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 0;
+
+      color: #16a085;
+      font-size: 42px;
+      line-height: 40px;
+
+      -webkit-animation-name: opacity;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: opacity;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
 
     &__text {
       display: inline;
@@ -1701,6 +1802,7 @@ button#btn3-2 div:nth-child(2) p {
 
     &__list {
       margin-top: 0;
+      // padding-left: 441px;
       text-align: left;
       list-style: none;
 
@@ -1712,7 +1814,7 @@ button#btn3-2 div:nth-child(2) p {
       animation-iteration-count: infinite;
 
       &__item {
-        line-height: 40px;
+        line-height: 40px !important;
         margin: 0;
         padding: 30px 0;
       }
@@ -1720,7 +1822,59 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
+// .contents {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   height: 172px;
+//   overflow: hidden;
+
+//   font-family: "Lato", sans-serif;
+//   font-size: 35px;
+//   line-height: 40px;
+//   color: #ecf0f1;
+
+//   &__container {
+//     font-weight: 600;
+//     overflow: hidden;
+//     height: 94px;
+//     width: max-content;
+
+//     &__text {
+//       display: inline;
+//       float: left;
+//       margin: 0;
+//     }
+
+//     &__list {
+//       margin-top: 0;
+//       text-align: left;
+//       list-style: none;
+
+//       -webkit-animation-name: change;
+//       -webkit-animation-duration: 10s;
+//       -webkit-animation-iteration-count: infinite;
+//       animation-name: change;
+//       animation-duration: 10s;
+//       animation-iteration-count: infinite;
+
+//       &__item {
+//         line-height: 40px;
+//         margin: 0;
+//         padding: 30px 0;
+//       }
+//     }
+//   }
+// }
+
 @media (max-width: 1440px) {
+  // .contents__container__list {
+  //   padding-left: 411px;
+  // }
+  .contents__container {
+    top: -12px;
+  }
   button#btn3-11 {
     height: 64px;
   }
@@ -1816,6 +1970,13 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
+@media (max-width: 1490px) {
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 1390px) {
   .contactopage .center .title h2 {
     font-size: 70px;
@@ -1843,10 +2004,22 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
-@media (max-width: 1216px) {
+@media (max-width: 1390px) {
   .contactopage .center .contenido-formulario h2,
   .contactopage .center .contenido-formulario p {
     font-size: 28px;
+  }
+  @media (max-width: 1262px) {
+    .contactopage .center .contenido-formulario h2,
+    .contactopage .center .contenido-formulario p {
+      font-size: 25px;
+    }
+  }
+  @media (max-width: 1140px) {
+    .contactopage .center .contenido-formulario h2,
+    .contactopage .center .contenido-formulario p {
+      font-size: 23px;
+    }
   }
 }
 
@@ -1862,6 +2035,9 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 1280px) {
+  .contents__container {
+    height: 87px;
+  }
   button#btn3-11 div span p {
     font-size: 32px;
   }
@@ -2249,6 +2425,15 @@ button#btn3-2 div:nth-child(2) p {
 }
 
 @media (max-width: 1024px) {
+  .contents__container {
+    top: -19px;
+  }
+  .contents__container {
+    height: 79px;
+  }
+  .contenedor-change {
+    padding-top: 8px;
+  }
   .btn-whatsapp img {
     width: 80px;
   }
@@ -2289,7 +2474,7 @@ button#btn3-2 div:nth-child(2) p {
     }
     .contactopage .center .contenido-formulario h2,
     .contactopage .center .contenido-formulario p {
-      font-size: 25px;
+      font-size: 24px;
     }
     .contactopage .center .title p {
       display: none;
@@ -2502,6 +2687,19 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
+@media (max-width: 780px) {
+  .contenedor-change {
+    flex-direction: column;
+  }
+  .contents__container {
+    height: 81px;
+    padding-top: 13px;
+  }
+  .contenedor-change {
+    padding-top: 5px;
+  }
+}
+
 @media (max-width: 768px) and (min-width: 426px) {
   .about .context .part2 h2 {
     font-size: 60px;
@@ -2576,6 +2774,9 @@ button#btn3-2 div:nth-child(2) p {
   display: none;
 }
 @media (max-width: 910px) {
+  .contenedor-change {
+    padding-top: 14px;
+  }
   button#btn3-11 {
     height: 60px;
   }
@@ -2659,6 +2860,21 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
+@media (max-width: 610px) {
+  .contenedor-change {
+    padding-top: 14px;
+  }
+  .contents__container {
+    height: 71px;
+  }
+  .contents__container {
+    padding-top: 13px;
+  }
+  .contents__container__list__item {
+    padding: 27px 0;
+  }
+}
+
 @media (max-width: 610px) and (min-width: 426px) {
   // #navigation {
   //   padding: 45px 0 !important;
@@ -2672,14 +2888,8 @@ button#btn3-2 div:nth-child(2) p {
     line-height: 50px;
     // margin-bottom: 10px;
   }
-  .contents__container {
-    height: 64px;
-  }
   .home .part1 li {
     font-size: 50px;
-  }
-  .contents__container__list__item {
-    padding: 11px 0;
   }
   .home .part1,
   .home .part2 {
@@ -2725,24 +2935,6 @@ button#btn3-2 div:nth-child(2) p {
   }
 }
 
-@media (max-width: 589px) {
-  .contents__container {
-    width: 100%;
-  }
-  .contents__container__list__item {
-    line-height: 55px;
-  }
-  .contents__container {
-    height: 127px;
-  }
-  .contents__container__list__item {
-    padding: 11px 0;
-  }
-  .home .part1 p.parrafohome {
-    margin-top: 15px;
-  }
-}
-
 @media (max-width: 570px) {
   .thanks .content .contenterror .textThank::before {
     right: -111px;
@@ -2768,6 +2960,13 @@ button#btn3-2 div:nth-child(2) p {
     button#btn3-1 div span {
       padding: 11px 24px;
     }
+  }
+}
+
+@media (max-width: 490px) {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
+    font-size: 30px;
   }
 }
 
@@ -2952,7 +3151,7 @@ button#btn3-2 div:nth-child(2) p {
     h2,
     p {
       font-family: var(--fuente-montserrat);
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 400;
       color: #3e636b;
     }
@@ -3089,7 +3288,13 @@ button#btn3-2 div:nth-child(2) p {
   // }
   .galeria .slick-slide img {
     width: 100% !important;
+    display: block !important;
   }
+
+  .galeria .slick-slide img[src$="gif"] {
+    display: none !important;
+  }
+
   .galeria .slick-slide {
     margin: 0 12.5px;
   }
@@ -3131,18 +3336,55 @@ button#btn3-2 div:nth-child(2) p {
       transform: scale(0.8) rotate(-45deg);
     }
   }
+  @media (max-width: 420px) {
+    footer .contenidoFooter h3,
+    footer .contenidoFooter a {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 413px) {
+    .parrafoMovil h2,
+    .parrafoMovil p {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 390px) {
+    footer .contenidoFooter h3,
+    footer .contenidoFooter a {
+      font-size: 25px;
+    }
+    footer .creditos h3 {
+      font-size: 17px;
+    }
+    footer .creditos img {
+      width: 35px;
+    }
+  }
 }
 
 @media (max-width: 377px) {
   .parrafoMovil h2,
   .parrafoMovil p {
     font-family: var(--fuente-montserrat);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
   }
 }
 
 @media (max-width: 400px) {
+  .contents__container {
+    padding-top: 8px;
+  }
+  .contents__container {
+    height: 67px;
+  }
+  .contents__container {
+    top: -8px;
+  }
+  .contents__container__list__item {
+    padding: 19px 0;
+  }
+
   button#btn3-11 div span p {
     font-size: 25px;
   }

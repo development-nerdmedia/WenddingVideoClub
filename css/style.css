@@ -42,6 +42,10 @@ section.galeria .slick-slide {
 main {
   overflow: hidden; }
 
+.cambio {
+  display: inline;
+  float: left; }
+
 .btn-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -642,6 +646,43 @@ a.cerrar {
           font-family: var(--fuente-texto);
           padding: 0 5px; }
 
+.grecaptcha-badge {
+  visibility: hidden; }
+
+.form-group {
+  width: 100%;
+  position: relative; }
+  .form-group .form-label {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    color: #3e636b;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    cursor: text;
+    transition: 0.1s linear;
+    z-index: -1; }
+  .form-group .form-input:focus ~ label,
+  .form-group .form-input:valid ~ label {
+    font-size: 14px;
+    left: 0px;
+    top: -3px; }
+  .form-group .form-input.textarea:focus ~ label,
+  .form-group .form-input.textarea:valid ~ label {
+    font-size: 14px;
+    left: 0px;
+    top: -11px; }
+
+.form-group.textarea .form-label {
+  position: absolute;
+  left: 15px;
+  top: 2px;
+  color: #3e636b;
+  font-family: var(--fuente-titulo);
+  font-size: 18px;
+  cursor: text;
+  transition: 0.1s linear; }
+
 .contactopage {
   height: 100vh;
   z-index: 10;
@@ -666,7 +707,8 @@ a.cerrar {
     position: absolute;
     right: -146px;
     bottom: -40px;
-    opacity: 0.8; }
+    opacity: 0.8;
+    z-index: -1; }
   .contactopage .close {
     display: flex;
     justify-content: flex-end; }
@@ -727,6 +769,16 @@ a.cerrar {
         appearance: button;
         transition: all 0.2s linear;
         background-color: #3e636b; }
+      .contactopage .center .contenido-formulario #fs-frm [type="text"].falto,
+      .contactopage .center .contenido-formulario #fs-frm [type="number"].falto,
+      .contactopage .center .contenido-formulario #fs-frm [type="email"].falto,
+      .contactopage .center .contenido-formulario #fs-frm textarea.falto {
+        border-bottom: 1px solid #e11f4b !important; }
+        .contactopage .center .contenido-formulario #fs-frm [type="text"].falto ~ label,
+        .contactopage .center .contenido-formulario #fs-frm [type="number"].falto ~ label,
+        .contactopage .center .contenido-formulario #fs-frm [type="email"].falto ~ label,
+        .contactopage .center .contenido-formulario #fs-frm textarea.falto ~ label {
+          color: #e11f4b; }
       .contactopage .center .contenido-formulario form {
         margin-top: 20px; }
         .contactopage .center .contenido-formulario form fieldset {
@@ -749,7 +801,11 @@ a.cerrar {
             border-bottom: 1px solid #3e636b;
             font-size: 18px;
             width: 100%;
-            color: #3e636b; }
+            color: #3e636b;
+            box-sizing: border-box;
+            background-color: transparent;
+            padding: 0 15px;
+            padding-top: 8px; }
           .contactopage .center .contenido-formulario form fieldset input[type="email"] {
             margin-bottom: 35px; }
           .contactopage .center .contenido-formulario form fieldset textarea {
@@ -760,7 +816,11 @@ a.cerrar {
             font-size: 18px;
             height: 130px;
             width: 100%;
-            color: #3e636b; }
+            color: #3e636b;
+            box-sizing: border-box;
+            background-color: transparent;
+            padding: 0 15px;
+            padding-top: 8px; }
           .contactopage .center .contenido-formulario form fieldset input[type="submit"] {
             width: 270px;
             background-color: #fff;
@@ -802,7 +862,7 @@ footer {
   footer .creditos {
     display: flex;
     justify-content: center;
-    align-items: flex-end; }
+    align-items: center; }
     footer .creditos h3 {
       font-family: var(--fuente-titulo);
       font-size: 19px;
@@ -1315,22 +1375,44 @@ button#btn3-2 div:nth-child(2) p {
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px; }
 
+.contenedor-change {
+  position: relative;
+  width: max-content;
+  display: flex;
+  padding-top: 5px; }
+  .contenedor-change h1 {
+    width: max-content !important; }
+
 .contents {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 172px;
+  height: 160px;
   overflow: hidden;
   font-family: "Lato", sans-serif;
   font-size: 35px;
   line-height: 40px;
   color: #ecf0f1; }
   .contents__container {
+    position: relative;
     font-weight: 600;
     overflow: hidden;
-    height: 94px;
-    width: max-content; }
+    height: 93px;
+    width: max-content;
+    top: -8px; }
+    .contents__container:after, .contents__container:before {
+      position: absolute;
+      top: 0;
+      color: #16a085;
+      font-size: 42px;
+      line-height: 40px;
+      -webkit-animation-name: opacity;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: opacity;
+      animation-duration: 2s;
+      animation-iteration-count: infinite; }
     .contents__container__text {
       display: inline;
       float: left;
@@ -1346,11 +1428,13 @@ button#btn3-2 div:nth-child(2) p {
       animation-duration: 10s;
       animation-iteration-count: infinite; }
       .contents__container__list__item {
-        line-height: 40px;
+        line-height: 40px !important;
         margin: 0;
         padding: 30px 0; }
 
 @media (max-width: 1440px) {
+  .contents__container {
+    top: -12px; }
   button#btn3-11 {
     height: 64px; }
   button#btn3-11 div span {
@@ -1413,6 +1497,11 @@ button#btn3-2 div:nth-child(2) p {
   .reels .slick-next {
     top: -94px; } }
 
+@media (max-width: 1490px) {
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 32px; } }
+
 @media (max-width: 1390px) {
   .contactopage .center .title h2 {
     font-size: 70px;
@@ -1434,10 +1523,20 @@ input[type="submit"] {
     font-size: 40px;
     height: 65px; } }
 
-@media (max-width: 1216px) {
+@media (max-width: 1390px) {
   .contactopage .center .contenido-formulario h2,
   .contactopage .center .contenido-formulario p {
     font-size: 28px; } }
+
+@media (max-width: 1390px) and (max-width: 1262px) {
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 25px; } }
+
+@media (max-width: 1390px) and (max-width: 1140px) {
+  .contactopage .center .contenido-formulario h2,
+  .contactopage .center .contenido-formulario p {
+    font-size: 23px; } }
 
 @media (max-width: 1349px) {
   .about .context .part1 img {
@@ -1448,6 +1547,8 @@ input[type="submit"] {
     height: 574px; } }
 
 @media (max-width: 1280px) {
+  .contents__container {
+    height: 87px; }
   button#btn3-11 div span p {
     font-size: 32px; }
   button#btn3-11 div span {
@@ -1720,6 +1821,12 @@ input[type="submit"] {
     transform: translateX(272px); } }
 
 @media (max-width: 1024px) {
+  .contents__container {
+    top: -19px; }
+  .contents__container {
+    height: 79px; }
+  .contenedor-change {
+    padding-top: 8px; }
   .btn-whatsapp img {
     width: 80px; }
   .containerback {
@@ -1751,7 +1858,7 @@ input[type="submit"] {
     line-height: 50px; }
   .contactopage .center .contenido-formulario h2,
   .contactopage .center .contenido-formulario p {
-    font-size: 25px; }
+    font-size: 24px; }
   .contactopage .center .title p {
     display: none; }
   .contactopage .center .contenido-formulario {
@@ -1910,6 +2017,15 @@ input[type="submit"] {
       text-align: center;
       padding-bottom: 40px; } }
 
+@media (max-width: 780px) {
+  .contenedor-change {
+    flex-direction: column; }
+  .contents__container {
+    height: 81px;
+    padding-top: 13px; }
+  .contenedor-change {
+    padding-top: 5px; } }
+
 @media (max-width: 768px) and (min-width: 426px) {
   .about .context .part2 h2 {
     font-size: 60px;
@@ -1964,6 +2080,8 @@ input[type="submit"] {
   display: none; }
 
 @media (max-width: 910px) {
+  .contenedor-change {
+    padding-top: 14px; }
   button#btn3-11 {
     height: 60px; }
   button#btn3-11 div span p {
@@ -2020,6 +2138,16 @@ input[type="submit"] {
     margin: 0 50px;
     padding: 0 0; } }
 
+@media (max-width: 610px) {
+  .contenedor-change {
+    padding-top: 14px; }
+  .contents__container {
+    height: 71px; }
+  .contents__container {
+    padding-top: 13px; }
+  .contents__container__list__item {
+    padding: 27px 0; } }
+
 @media (max-width: 610px) and (min-width: 426px) {
   .home .context {
     flex-direction: column; }
@@ -2027,12 +2155,8 @@ input[type="submit"] {
     font-size: 50px;
     width: 427px;
     line-height: 50px; }
-  .contents__container {
-    height: 64px; }
   .home .part1 li {
     font-size: 50px; }
-  .contents__container__list__item {
-    padding: 11px 0; }
   .home .part1,
   .home .part2 {
     width: 100%; }
@@ -2066,18 +2190,6 @@ input[type="submit"] {
     50% {
       transform: translateY(-34px); } } }
 
-@media (max-width: 589px) {
-  .contents__container {
-    width: 100%; }
-  .contents__container__list__item {
-    line-height: 55px; }
-  .contents__container {
-    height: 127px; }
-  .contents__container__list__item {
-    padding: 11px 0; }
-  .home .part1 p.parrafohome {
-    margin-top: 15px; } }
-
 @media (max-width: 570px) {
   .thanks .content .contenterror .textThank::before {
     right: -111px;
@@ -2096,6 +2208,11 @@ input[type="submit"] {
     padding: 11px 24px; }
   button#btn3-1 div span {
     padding: 11px 24px; } }
+
+@media (max-width: 490px) {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
+    font-size: 30px; } }
 
 @media (max-width: 425px) {
   .logo img.img-nav {
@@ -2220,7 +2337,7 @@ input[type="submit"] {
     .parrafoMovil h2,
     .parrafoMovil p {
       font-family: var(--fuente-montserrat);
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 400;
       color: #3e636b; }
   .contactopage .center .contenido-formulario form fieldset textarea {
@@ -2310,7 +2427,10 @@ input[type="submit"] {
   .galeria .slick-next {
     transform: translateX(286px); }
   .galeria .slick-slide img {
-    width: 100% !important; }
+    width: 100% !important;
+    display: block !important; }
+  .galeria .slick-slide img[src$="gif"] {
+    display: none !important; }
   .galeria .slick-slide {
     margin: 0 12.5px; }
   footer .contenidoFooter h3,
@@ -2344,14 +2464,41 @@ input[type="submit"] {
     left: 55%;
     transform: scale(0.8) rotate(-45deg); } }
 
+@media (max-width: 580px) and (max-width: 420px) {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
+    font-size: 28px; } }
+
+@media (max-width: 580px) and (max-width: 413px) {
+  .parrafoMovil h2,
+  .parrafoMovil p {
+    font-size: 22px; } }
+
+@media (max-width: 580px) and (max-width: 390px) {
+  footer .contenidoFooter h3,
+  footer .contenidoFooter a {
+    font-size: 25px; }
+  footer .creditos h3 {
+    font-size: 17px; }
+  footer .creditos img {
+    width: 35px; } }
+
 @media (max-width: 377px) {
   .parrafoMovil h2,
   .parrafoMovil p {
     font-family: var(--fuente-montserrat);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400; } }
 
 @media (max-width: 400px) {
+  .contents__container {
+    padding-top: 8px; }
+  .contents__container {
+    height: 67px; }
+  .contents__container {
+    top: -8px; }
+  .contents__container__list__item {
+    padding: 19px 0; }
   button#btn3-11 div span p {
     font-size: 25px; }
   .home .part1 h1 {
